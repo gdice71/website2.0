@@ -1,0 +1,535 @@
+/* Career Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    position: relative;
+    padding: 180px 0 100px;
+    overflow: hidden;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.page-title {
+    font-size: clamp(56px, 8vw, 96px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 120px 0 var(--section-spacing);  /* Add 120px top padding */
+}
+
+
+.timeline {
+    position: relative;
+    padding-left: 60px;
+    margin-top: 60px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-color), transparent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -48px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    border: 3px solid var(--primary-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.timeline-content {
+    position: relative;
+}
+
+.timeline-period {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent-color);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.timeline-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.timeline-company {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+}
+
+.timeline-details {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-details li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.timeline-details li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: var(--section-spacing) 0;
+    background: var(--secondary-bg);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.skill-category.full-width {
+    grid-column: 1 / -1;
+}
+
+.skill-category-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+}
+
+.skill-tag:hover::before {
+    left: 100%;
+}
+
+/* Education Section */
+.education-section {
+    padding: var(--section-spacing) 0;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.education-card {
+    padding: 40px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.education-card:hover::before {
+    transform: scaleX(1);
+}
+
+.education-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.edu-period {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.edu-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.edu-institution {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.edu-detail {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.edu-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.highlight-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlight-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.highlight-value {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Awards Section */
+.awards-section {
+    padding: var(--section-spacing) 0;
+    background: var(--secondary-bg);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.award-card {
+    padding: 40px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card.featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 153, 255, 0.05));
+}
+
+.award-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.award-card:hover::after {
+    opacity: 1;
+}
+
+.award-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.award-year {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+}
+
+.award-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.award-institution {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-family: var(--font-mono);
+}
+
+.award-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.ap-scores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.ap-score {
+    padding: 8px 16px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-primary);
+}
+
+/* International Section */
+.international-section {
+    padding: var(--section-spacing) 0;
+}
+
+.international-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.international-card,
+.languages-card {
+    padding: 40px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.international-card:hover,
+.languages-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.intl-year {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+}
+
+.intl-title,
+.languages-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+}
+
+.intl-location {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.intl-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.language-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.language-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.language-level {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: -33px;
+    }
+
+    .education-grid,
+    .international-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-header {
+        padding: 140px 0 60px;
+    }
+
+    .page-title {
+        font-size: 40px;
+    }
+
+    .timeline-title {
+        font-size: 22px;
+    }
+
+    .award-card.featured {
+        grid-column: 1;
+    }
+
+    .language-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
