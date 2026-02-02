@@ -1,18 +1,18 @@
-/* Project Detail Pages Shared Styles */
+/* Project Detail Pages - Championship Presentation */
 
-/* Back Button */
+/* Back Button - Premium Navigation */
 .back-button-container {
     position: fixed;
-    top: 100px;
+    top: 120px;
     left: var(--container-padding);
     z-index: 999;
-    animation: fadeInLeft 0.8s ease-out 0.5s backwards;
+    animation: championSlideIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s backwards;
 }
 
-@keyframes fadeInLeft {
+@keyframes championSlideIn {
     from {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-30px);
     }
     to {
         opacity: 1;
@@ -23,112 +23,127 @@
 .back-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
-    background: rgba(17, 17, 17, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    gap: 12px;
+    padding: 14px 30px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 2px solid var(--border-luxury);
+    border-radius: 10px;
     color: var(--text-primary);
     text-decoration: none;
     font-family: var(--font-mono);
-    font-size: 13px;
-    letter-spacing: 0.05em;
-    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .back-button:hover {
-    background: rgba(17, 17, 17, 0.95);
-    border-color: var(--accent-color);
-    transform: translateX(-5px);
+    background: rgba(0, 0, 0, 0.95);
+    border-color: var(--accent-gold);
+    transform: translateX(-8px);
+    box-shadow: var(--gold-glow);
 }
 
 .back-button span:first-child {
-    font-size: 18px;
-    transition: transform 0.3s ease;
+    font-size: 20px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .back-button:hover span:first-child {
-    transform: translateX(-3px);
+    transform: translateX(-4px);
 }
 
 /* Project Header */
 .project-header {
     position: relative;
-    padding: 180px 0 80px;
+    padding: 200px 0 100px;
     overflow: hidden;
+    background: var(--secondary-bg);
 }
 
 .project-header-content {
-    max-width: 900px;
+    max-width: 1000px;
     position: relative;
     z-index: 1;
 }
 
 .project-category-badge {
     display: inline-block;
-    padding: 8px 16px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
+    padding: 10px 22px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
     font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--accent-color);
-    margin-bottom: 30px;
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--accent-gold);
+    margin-bottom: 36px;
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+    font-weight: 700;
 }
 
 .project-main-title {
-    font-size: clamp(48px, 8vw, 80px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    margin-bottom: 30px;
-    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    font-size: clamp(52px, 9vw, 96px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 36px;
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s backwards;
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .project-description {
     font-size: 20px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-secondary);
-    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.7s backwards;
+    margin-bottom: 24px;
 }
 
 /* Project Gallery Section */
 .project-gallery-section {
-    padding: 120px 0 var(--section-spacing);  /* Add 120px top padding */
+    padding: 140px 0 var(--section-spacing);
 }
 
 .project-images {
     display: grid;
-    gap: 30px;
+    gap: 40px;
 }
 
 .project-image-item {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    border: 2px solid var(--border-luxury);
     background: var(--secondary-bg);
-    transition: all 0.4s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-image-item:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+    border-color: var(--accent-gold);
+    transform: translateY(-8px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .project-image-item img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.6s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: contrast(1.08);
 }
 
 .project-image-item:hover img {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    filter: contrast(1.12);
 }
 
 /* Video Container */
@@ -136,14 +151,15 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    border: 2px solid var(--border-luxury);
     background: var(--secondary-bg);
-    transition: all 0.4s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-video-item:hover {
-    border-color: var(--accent-color);
+    border-color: var(--accent-gold);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .project-video-item video {
@@ -154,45 +170,49 @@
 
 /* Project Text Content */
 .project-text-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background: var(--secondary-bg);
 }
 
 .project-text-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .project-text-content h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .project-text-content p {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 19px;
+    line-height: 1.9;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
-/* Next Project Section */
+/* Next Project Section - Championship Transition */
 .next-project-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background: var(--secondary-bg);
 }
 
 .next-project-link {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 60px;
+    gap: 20px;
+    padding: 70px;
     background: var(--primary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border: 2px solid var(--border-luxury);
+    border-radius: 12px;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
@@ -204,8 +224,11 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.05), transparent);
-    transition: left 0.6s ease;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(212, 175, 55, 0.08),
+        transparent);
+    transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .next-project-link:hover::before {
@@ -213,53 +236,65 @@
 }
 
 .next-project-link:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    transform: translateY(-8px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .next-label {
     font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    color: var(--accent-color);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .next-title {
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
     color: var(--text-primary);
-    transition: transform 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .next-project-link:hover .next-title {
-    transform: translateX(10px);
+    transform: translateX(12px);
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .next-arrow {
-    font-size: 32px;
-    color: var(--accent-color);
-    transition: transform 0.4s ease;
+    font-size: 40px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .next-project-link:hover .next-arrow {
-    transform: translateX(10px);
+    transform: translateX(12px);
 }
 
-/* Responsive */
+/* Responsive - Luxury Maintained */
 @media (max-width: 968px) {
     .back-button-container {
-        top: 90px;
-        left: 20px;
+        top: 100px;
+        left: 24px;
     }
 
     .project-header {
-        padding: 140px 0 60px;
+        padding: 160px 0 80px;
     }
 
     .project-main-title {
-        font-size: 40px;
+        font-size: 48px;
     }
 
     .project-description {
@@ -267,11 +302,11 @@
     }
 
     .next-project-link {
-        padding: 40px;
+        padding: 50px;
     }
 
     .next-title {
-        font-size: 32px;
+        font-size: 38px;
     }
 }
 
@@ -280,22 +315,22 @@
         position: relative;
         top: 0;
         left: 0;
-        padding: 20px var(--container-padding);
+        padding: 24px var(--container-padding);
     }
 
     .project-header {
-        padding: 120px 0 40px;
+        padding: 140px 0 60px;
     }
 
     .project-images {
-        gap: 20px;
+        gap: 28px;
     }
 
     .next-project-link {
-        padding: 30px;
+        padding: 40px;
     }
 
     .next-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 }

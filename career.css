@@ -1,81 +1,36 @@
-/* Career Page Specific Styles */
+/* Career Page - Championship Record */
 
-/* Page Header */
-.page-header {
-    position: relative;
-    padding: 180px 0 100px;
-    overflow: hidden;
-}
-
-.header-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.header-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-}
-
-.header-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--text-secondary);
-    margin-bottom: 30px;
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
-}
-
-.page-title {
-    font-size: clamp(56px, 8vw, 96px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    margin-bottom: 20px;
-    animation: fadeInUp 0.8s ease-out 0.4s backwards;
-}
-
-.page-subtitle {
-    font-size: 20px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    animation: fadeInUp 0.8s ease-out 0.6s backwards;
-}
-
-/* Experience Section */
+/* Experience Section - Trophy Case */
 .experience-section {
-    padding: 120px 0 var(--section-spacing);  /* Add 120px top padding */
+    padding: 140px 0 var(--section-spacing);
 }
-
 
 .timeline {
     position: relative;
-    padding-left: 60px;
-    margin-top: 60px;
+    padding-left: 80px;
+    margin-top: 80px;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 28px;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--accent-color), transparent);
+    width: 3px;
+    background: linear-gradient(180deg, 
+        var(--accent-gold) 0%,
+        var(--accent-platinum) 50%,
+        var(--accent-gold) 100%);
+    box-shadow: var(--gold-glow);
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 60px;
-    padding-bottom: 60px;
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--border-luxury);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .timeline-item:last-child {
@@ -84,44 +39,80 @@
     padding-bottom: 0;
 }
 
+.timeline-item:hover {
+    transform: translateX(10px);
+}
+
 .timeline-marker {
     position: absolute;
-    left: -48px;
-    top: 8px;
-    width: 12px;
-    height: 12px;
-    background: var(--accent-color);
-    border: 3px solid var(--primary-bg);
+    left: -58px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    border: 4px solid var(--primary-bg);
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    box-shadow: var(--gold-glow);
+    z-index: 2;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.4);
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
 }
 
 .timeline-content {
     position: relative;
+    padding: 40px;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    border: 2px solid var(--border-luxury);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: var(--accent-gold);
+    background: var(--tertiary-bg);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .timeline-period {
     font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent-color);
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
+    font-size: 12px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.16em;
+    margin-bottom: 16px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .timeline-title {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin-bottom: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
     color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-title {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .timeline-company {
     font-size: 16px;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-family: var(--font-mono);
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
 .timeline-details {
@@ -131,21 +122,29 @@
 
 .timeline-details li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
+    padding-left: 32px;
+    margin-bottom: 16px;
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 16px;
 }
 
 .timeline-details li::before {
-    content: '→';
+    content: '';
     position: absolute;
     left: 0;
-    color: var(--accent-color);
-    font-weight: 600;
+    top: 10px;
+    width: 16px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-platinum));
+    transition: width 0.3s ease;
 }
 
-/* Skills Section */
+.timeline-item:hover .timeline-details li::before {
+    width: 20px;
+}
+
+/* Skills Section - Technical Excellence */
 .skills-section {
     padding: var(--section-spacing) 0;
     background: var(--secondary-bg);
@@ -154,7 +153,7 @@
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 50px;
 }
 
 .skill-category.full-width {
@@ -162,30 +161,36 @@
 }
 
 .skill-category-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
 }
 
 .skill-tag {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 14px 24px;
     background: var(--primary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border: 2px solid var(--border-luxury);
+    border-radius: 8px;
     font-family: var(--font-mono);
     font-size: 13px;
     color: var(--text-primary);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
 .skill-tag::before {
@@ -195,38 +200,43 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(212, 175, 55, 0.15),
+        transparent);
+    transition: left 0.6s ease;
 }
 
 .skill-tag:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+    border-color: var(--accent-gold);
+    transform: translateY(-3px);
+    box-shadow: var(--gold-glow);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(229, 228, 226, 0.1));
 }
 
 .skill-tag:hover::before {
     left: 100%;
 }
 
-/* Education Section */
+/* Education Section - Academic Excellence */
 .education-section {
     padding: var(--section-spacing) 0;
 }
 
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 50px;
 }
 
 .education-card {
-    padding: 40px;
+    padding: 50px;
     background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border: 2px solid var(--border-luxury);
+    border-radius: 12px;
     position: relative;
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
 .education-card::before {
@@ -235,80 +245,117 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-platinum), var(--accent-gold));
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .education-card:hover::before {
     transform: scaleX(1);
 }
 
+.education-card:hover::after {
+    opacity: 1;
+}
+
 .education-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    transform: translateY(-8px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .edu-period {
     font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--accent-color);
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
+    font-size: 11px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.16em;
+    margin-bottom: 20px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .edu-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: -0.01em;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
 }
 
 .edu-institution {
     font-size: 16px;
     color: var(--text-secondary);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-weight: 600;
 }
 
 .edu-detail {
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-top: 15px;
+    line-height: 1.7;
+    margin-top: 20px;
 }
 
 .edu-highlights {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
+    gap: 20px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-luxury);
 }
 
 .highlight-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 20px;
+    background: var(--primary-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-luxury);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    border-color: var(--accent-gold);
+    background: var(--tertiary-bg);
 }
 
 .highlight-label {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-muted);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .highlight-value {
-    font-size: 14px;
-    color: var(--text-primary);
-    font-weight: 500;
+    font-size: 15px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
-/* Awards Section */
+/* Awards Section - Championship Trophies */
 .awards-section {
     padding: var(--section-spacing) 0;
     background: var(--secondary-bg);
@@ -316,157 +363,204 @@
 
 .awards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
 }
 
 .award-card {
-    padding: 40px;
+    padding: 50px;
     background: var(--primary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    transition: all 0.4s ease;
+    border: 2px solid var(--border-luxury);
+    border-radius: 12px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
 
 .award-card.featured {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 153, 255, 0.05));
+    background: linear-gradient(135deg, 
+        rgba(212, 175, 55, 0.08) 0%,
+        rgba(229, 228, 226, 0.05) 100%);
+    border: 2px solid var(--accent-gold);
 }
 
-.award-card::after {
+.award-card::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.1), transparent);
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent 50%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: all 0.6s ease;
+    pointer-events: none;
 }
 
-.award-card:hover::after {
+.award-card:hover::before {
     opacity: 1;
+    top: -50%;
+    left: -50%;
 }
 
 .award-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    transform: translateY(-8px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .award-year {
     font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--accent-color);
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
+    font-size: 11px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.16em;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .award-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: -0.01em;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
 }
 
 .award-institution {
     font-size: 14px;
     color: var(--text-secondary);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: var(--font-mono);
+    font-weight: 600;
 }
 
 .award-description {
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .ap-scores {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-luxury);
 }
 
 .ap-score {
-    padding: 8px 16px;
+    padding: 10px 18px;
     background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border: 1px solid var(--border-luxury);
+    border-radius: 6px;
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--text-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-/* International Section */
+.ap-score:hover {
+    border-color: var(--accent-gold);
+    background: var(--tertiary-bg);
+}
+
+/* International Section - Global Experience */
 .international-section {
     padding: var(--section-spacing) 0;
 }
 
 .international-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 50px;
 }
 
 .international-card,
 .languages-card {
-    padding: 40px;
+    padding: 50px;
     background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    transition: all 0.4s ease;
+    border: 2px solid var(--border-luxury);
+    border-radius: 12px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+.international-card::after,
+.languages-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .international-card:hover,
 .languages-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    transform: translateY(-8px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
+}
+
+.international-card:hover::after,
+.languages-card:hover::after {
+    opacity: 1;
 }
 
 .intl-year {
     font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--accent-color);
-    letter-spacing: 0.1em;
-    margin-bottom: 15px;
+    font-size: 11px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.16em;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .intl-title,
 .languages-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    letter-spacing: -0.01em;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
 }
 
 .intl-location {
     font-size: 16px;
     color: var(--text-secondary);
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    font-family: var(--font-mono);
+    font-weight: 600;
 }
 
 .intl-description {
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .language-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .language-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-luxury);
+    transition: all 0.3s ease;
 }
 
 .language-item:last-child {
@@ -474,34 +568,44 @@
     padding-bottom: 0;
 }
 
+.language-item:hover {
+    padding-left: 10px;
+}
+
 .language-name {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--text-primary);
 }
 
 .language-level {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
-/* Responsive */
+/* Responsive - Luxury Maintained */
 @media (max-width: 968px) {
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
     .timeline {
-        padding-left: 40px;
+        padding-left: 60px;
     }
 
     .timeline::before {
-        left: 15px;
+        left: 20px;
     }
 
     .timeline-marker {
-        left: -33px;
+        left: -46px;
+    }
+
+    .timeline-content {
+        padding: 30px;
     }
 
     .education-grid,
@@ -512,15 +616,23 @@
 
 @media (max-width: 640px) {
     .page-header {
-        padding: 140px 0 60px;
+        padding: 160px 0 80px;
     }
 
     .page-title {
-        font-size: 40px;
+        font-size: 48px;
+    }
+
+    .timeline {
+        padding-left: 50px;
     }
 
     .timeline-title {
-        font-size: 22px;
+        font-size: 26px;
+    }
+
+    .timeline-content {
+        padding: 24px;
     }
 
     .award-card.featured {
@@ -530,6 +642,12 @@
     .language-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 10px;
+    }
+
+    .education-card,
+    .international-card,
+    .languages-card {
+        padding: 35px;
     }
 }

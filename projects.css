@@ -1,37 +1,32 @@
-/* Projects Page Specific Styles */
-/* Page Header */
-.page-header {
-    position: relative;
-    padding: 180px 0 100px;
-    overflow: hidden;
-}
+/* Projects Page - Portfolio Showcase */
+
 .container-full {
-    max-width: 1600px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
 
 /* Projects Section */
 .projects-section {
-    padding: 120px 0 var(--section-spacing);
+    padding: 140px 0 var(--section-spacing);
 }
 
 /* Dynamic Grid Layout */
 .container-full {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
+    gap: 40px;
 }
 
-/* Project Items */
+/* Project Items - Luxury Cards */
 .project-item {
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-luxury);
     background: var(--secondary-bg);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Layout Sizes */
@@ -62,13 +57,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: grayscale(30%) brightness(0.8);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(20%) contrast(1.08) brightness(0.9);
 }
 
 .project-item:hover .project-image img {
-    transform: scale(1.08);
-    filter: grayscale(0%) brightness(1);
+    transform: scale(1.12);
+    filter: grayscale(0%) contrast(1.15) brightness(1.05);
 }
 
 /* Project Overlay */
@@ -80,15 +75,20 @@
     bottom: 0;
     background: linear-gradient(
         180deg,
-        rgba(10, 10, 10, 0) 0%,
-        rgba(10, 10, 10, 0.4) 50%,
-        rgba(10, 10, 10, 0.95) 100%
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.96) 100%
     );
-    transition: opacity 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item:hover .project-overlay {
-    opacity: 0.85;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        rgba(0, 0, 0, 0.98) 100%
+    );
 }
 
 /* Project Info */
@@ -97,31 +97,32 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 40px;
+    padding: 50px;
     z-index: 2;
     transform: translateY(0);
-    transition: transform 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item.large .project-info {
-    padding: 60px;
+    padding: 70px;
 }
 
 .project-category {
     display: inline-block;
     font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--accent-color);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--accent-gold);
     text-transform: uppercase;
-    margin-bottom: 15px;
-    padding: 6px 12px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 8px 18px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease 0.1s;
+    transform: translateY(25px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
 }
 
 .project-item:hover .project-category {
@@ -130,46 +131,54 @@
 }
 
 .project-title {
-    font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
     color: var(--text-primary);
-    transform: translateY(10px);
-    transition: transform 0.4s ease 0.15s;
+    transform: translateY(12px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
 .project-item.large .project-title {
-    font-size: clamp(40px, 6vw, 72px);
+    font-size: clamp(48px, 7vw, 84px);
 }
 
 .project-item:hover .project-title {
     transform: translateY(0);
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .project-subtitle {
-    font-size: clamp(18px, 2.5vw, 28px);
+    font-size: clamp(20px, 2.8vw, 32px);
     color: var(--text-secondary);
-    font-weight: 400;
-    margin-bottom: 20px;
-    transform: translateY(10px);
-    transition: transform 0.4s ease 0.2s;
+    font-weight: 500;
+    margin-bottom: 24px;
+    transform: translateY(12px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
 }
 
 .project-item.large .project-subtitle {
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: clamp(28px, 3.5vw, 42px);
 }
 
 .project-item:hover .project-subtitle {
     transform: translateY(0);
+    color: var(--text-primary);
 }
 
 .project-arrow {
-    font-size: 32px;
-    color: var(--accent-color);
+    font-size: 40px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.4s ease 0.25s;
+    transform: translateX(-25px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
 
 .project-item:hover .project-arrow {
@@ -177,7 +186,7 @@
     transform: translateX(0);
 }
 
-/* Hover Border Effect */
+/* Luxury Border Effect */
 .project-item::before {
     content: '';
     position: absolute;
@@ -185,11 +194,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid var(--accent-color);
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, var(--accent-gold), var(--accent-platinum)) 1;
     opacity: 0;
-    transform: scale(0.95);
-    transition: all 0.4s ease;
-    border-radius: 4px;
+    transform: scale(0.96);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
     z-index: 3;
     pointer-events: none;
 }
@@ -199,7 +209,13 @@
     transform: scale(1);
 }
 
-/* Shimmer Effect on Hover */
+.project-item:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-10px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
+}
+
+/* Championship Shine Effect */
 .project-item::after {
     content: '';
     position: absolute;
@@ -210,21 +226,21 @@
     background: linear-gradient(
         45deg,
         transparent 30%,
-        rgba(0, 255, 136, 0.1) 50%,
+        rgba(212, 175, 55, 0.1) 50%,
         transparent 70%
     );
-    transform: translateX(-100%);
-    transition: transform 0.8s ease;
+    transform: translateX(-100%) rotate(45deg);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
 }
 
 .project-item:hover::after {
-    transform: translateX(100%);
+    transform: translateX(100%) rotate(45deg);
 }
 
-/* CTA Section */
+/* CTA Section - Championship Call */
 .cta-section {
-    padding: 120px 0;
+    padding: 140px 0;
     background: var(--secondary-bg);
     position: relative;
     overflow: hidden;
@@ -237,47 +253,54 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.05), transparent);
+    background: radial-gradient(circle at 50% 50%, 
+        rgba(212, 175, 55, 0.06) 0%,
+        transparent 70%);
     pointer-events: none;
 }
 
 .cta-content {
     text-align: center;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
 .cta-title {
-    font-size: clamp(36px, 6vw, 56px);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
+    font-size: clamp(44px, 7vw, 68px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .cta-text {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--text-secondary);
-    margin-bottom: 40px;
-    line-height: 1.6;
+    margin-bottom: 50px;
+    line-height: 1.7;
 }
 
 .cta-button {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
-    padding: 20px 40px;
+    gap: 20px;
+    padding: 24px 50px;
     background: var(--primary-bg);
-    border: 2px solid var(--accent-color);
-    border-radius: 4px;
+    border: 2px solid var(--accent-gold);
+    border-radius: 10px;
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    letter-spacing: 0.02em;
 }
 
 .cta-button::before {
@@ -287,8 +310,10 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: var(--accent-color);
-    transition: left 0.4s ease;
+    background: linear-gradient(90deg, 
+        var(--accent-gold),
+        var(--accent-platinum));
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
 }
 
@@ -298,19 +323,20 @@
 
 .cta-button:hover {
     color: var(--primary-bg);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--luxury-shadow), var(--gold-glow);
 }
 
 .button-arrow {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 24px;
 }
 
 .cta-button:hover .button-arrow {
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
-/* Responsive */
+/* Responsive - Luxury Maintained */
 @media (max-width: 1024px) {
     .project-item.large {
         aspect-ratio: 16/9;
@@ -328,7 +354,7 @@
 
 @media (max-width: 640px) {
     .container-full {
-        gap: 20px;
+        gap: 24px;
     }
 
     .project-item.large,
@@ -339,57 +365,57 @@
     }
 
     .project-info {
-        padding: 25px;
+        padding: 32px;
     }
 
     .project-item.large .project-info {
-        padding: 30px;
+        padding: 40px;
     }
 
     .project-title {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .project-item.large .project-title {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .project-subtitle {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .project-item.large .project-subtitle {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .cta-section {
-        padding: 80px 0;
+        padding: 100px 0;
     }
 
     .cta-title {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .cta-button {
-        padding: 16px 32px;
-        font-size: 16px;
+        padding: 20px 40px;
+        font-size: 18px;
     }
 }
 
-/* Loading Animation */
-@keyframes projectLoad {
+/* Loading Animation - Championship Entrance */
+@keyframes championLoad {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px) scale(0.96);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
 .project-item {
-    animation: projectLoad 0.8s ease-out backwards;
+    animation: championLoad 1s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
 .project-item:nth-child(1) { animation-delay: 0.1s; }
@@ -404,7 +430,7 @@
     .project-category,
     .project-arrow {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) translateX(0);
     }
 
     .project-item::before {
