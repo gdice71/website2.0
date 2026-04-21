@@ -3,101 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect 4 Robot - Grace Dice</title>
+    <meta name="description" content="Connect 4 Robot project by Grace Dice.">
+    <title>Connect 4 Robot | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-detail.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link active" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <a href="projects.html" class="back-button">
-            <span>←</span>
-            <span>Back to Projects</span>
-        </a>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
     </div>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="project-header-content">
-                <span class="project-category-badge">ROBOTICS</span>
-                <h1 class="project-main-title">1st Year Connect 4 Robot</h1>
-                <p class="project-description">
-                    A first-year engineering project combining robotics, programming, and mechanical design. This Connect 4 robot demonstrates fundamental engineering principles through an interactive game-playing system.
-                </p>
-                <p class="project-description">
-                    The project integrates C++ programming, mechanical assembly, and sensor integration to create an autonomous game-playing robot capable of strategic decision-making.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Gallery -->
-    <section class="project-gallery-section">
-        <div class="container">
-            <div class="project-images">
-                <div class="project-image-item" data-aos="fade-up">
-                    <img src="https://framerusercontent.com/images/icaPN7H2pnZ8oXKwFQyu8C6sT7A.png?width=904&height=844" alt="Connect 4 Robot" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Next Project -->
-    <section class="next-project-section">
-        <div class="container">
-            <a href="projects.html" class="next-project-link">
-                <span class="next-label">View All</span>
-                <h3 class="next-title">Back to Projects</h3>
-                <span class="next-arrow">→</span>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
             </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
-                </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
-        </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Robotics</span>
+                <h1>1st Year Connect 4 Robot</h1>
+                <p>This first-year project brought together programming, mechanical assembly, sensing, and game interaction in one compact system. The goal was not only to build a working robot, but to understand how separate engineering decisions compound in a single physical object.</p>
+                <p>It became a practical introduction to system thinking: structure, logic, movement, and reliability all had to align for the project to work.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Focus</span>
+                        <strong>Introductory robotics and game-playing system design</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Tools</span>
+                        <strong>C++, mechanical assembly, sensors</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Outcome</span>
+                        <strong>A working interactive robot with autonomous decision logic</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>Systems over parts</h2>
+                    <p>What made this project valuable was the way it tied disciplines together. Mechanical design on its own was not enough, and neither was code. The robot only became convincing when those decisions started reinforcing one another.</p>
+                    <p>That kind of integration is what still makes the project worth keeping in the archive.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Core pieces</h3>
+                    <ul>
+                        <li>Mechanical structure and motion path planning</li>
+                        <li>Programming for decision flow and interaction</li>
+                        <li>Sensor integration and reliability under simple constraints</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid">
+                <figure class="project-media project-media--wide" data-reveal><img src="https://framerusercontent.com/images/icaPN7H2pnZ8oXKwFQyu8C6sT7A.png?width=904&height=844" alt="Connect 4 robot" loading="lazy"></figure>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Next Project</span>
+                <h2>F1 Floor CAD and CFD Analysis</h2>
+                <p>A deeper aerodynamic study focused on regulation-driven geometry and ride-height sensitivity.</p>
+                <a class="project-next-link" href="project-f1-floor.html">Open next case study</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
     </footer>
 
     <script src="script.js"></script>

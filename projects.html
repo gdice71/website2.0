@@ -1,175 +1,166 @@
-import { inject } from "@vercel/analytics"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Grace Dice</title>
+    <meta name="description" content="Selected engineering, visualization, robotics, and design projects by Grace Dice.">
+    <title>Projects | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="projects.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
             </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link active" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="header-content">
-                <span class="header-label">
-                    <span class="label-dot"></span>
-                    PORTFOLIO
-                </span>
-                <h1 class="page-title">Selected Projects</h1>
-                <p class="page-subtitle">A showcase of technical precision, creative design, and systems thinking across engineering, robotics, visualization, and development.</p>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Grid -->
-    <section class="projects-section">
-        <div class="container-full">
-            <!-- McLaren P1 - Large Featured -->
-            <a href="project-mclaren-p1.html" class="project-item large" data-aos="fade-up">
-                <div class="project-image">
-                    <img src="https://framerusercontent.com/images/q02LmMvydAB6EviVZqpxKuBjsY8.png?width=1920&height=1080" alt="McLaren P1 Carbon Series">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <div class="project-category">3D Modeling</div>
-                    <h2 class="project-title">McLaren P1</h2>
-                    <p class="project-subtitle">Carbon Series</p>
-                    <div class="project-arrow">→</div>
-                </div>
-            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
 
-            <!-- McLaren 765LT - Large Featured -->
-            <a href="project-765lt.html" class="project-item large" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-image">
-                    <img src="https://framerusercontent.com/images/gBuinG9C5ilAqEMgS4Usuk3DBxg.png?width=2560&height=1080" alt="Lando Norris McLaren 765LT Spider">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <div class="project-category">Visualization</div>
-                    <h2 class="project-title">Lando Norris' 1-of-1 MSO</h2>
-                    <p class="project-subtitle">McLaren 765LT Spider</p>
-                    <div class="project-arrow">→</div>
-                </div>
-            </a>
+    <main class="projects-main">
+        <section class="section archive-hero">
+            <div class="archive-hero-copy" data-reveal>
+                <span class="section-kicker">Project Archive</span>
+                <h1>Technical work, resolved with the same calm visual language.</h1>
+                <p>
+                    A focused archive spanning 3D visualization, engineering analysis, robotics, and identity work. The throughline is the same in each one: structure first, detail second, polish throughout.
+                </p>
+            </div>
 
-            <!-- Tasty Treats - Medium -->
-            <a href="project-tasty-treats.html" class="project-item medium" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-image">
-                    <img src="https://framerusercontent.com/images/fyrqEXfXK7lZElFFviiUQp9Mcd8.png?width=3773&height=2292" alt="Tasty Treats Bake Stand">
-                    <div class="project-overlay"></div>
+            <div class="archive-hero-panel glass-card" data-reveal>
+                <div class="archive-stat">
+                    <span class="archive-stat-label">Collection</span>
+                    <strong>6 selected projects</strong>
                 </div>
-                <div class="project-info">
-                    <div class="project-category">Design</div>
-                    <h2 class="project-title">Tasty Treats</h2>
-                    <p class="project-subtitle">Bake Stand Branding Display</p>
-                    <div class="project-arrow">→</div>
+                <div class="archive-stat">
+                    <span class="archive-stat-label">Disciplines</span>
+                    <strong>Modeling, CFD, robotics, information design</strong>
                 </div>
-            </a>
+                <div class="archive-stat">
+                    <span class="archive-stat-label">Approach</span>
+                    <strong>Minimal presentation, high signal, clean sequencing</strong>
+                </div>
+            </div>
+        </section>
 
-            <!-- Timeline - Medium -->
-            <a href="project-timeline.html" class="project-item medium" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-image">
-                    <img src="https://framerusercontent.com/images/amArwx2QHDkss6snDVtDAODpQ.png?width=2868&height=1436" alt="International Timeline">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <div class="project-category">Information Design</div>
-                    <h2 class="project-title">International Timeline</h2>
-                    <p class="project-subtitle">of Events</p>
-                    <div class="project-arrow">→</div>
-                </div>
-            </a>
+        <section class="section archive-grid-section">
+            <div class="archive-grid">
+                <a class="archive-card archive-card-feature glass-card" href="project-mclaren-p1.html" data-reveal>
+                    <div class="archive-figure">
+                        <img src="https://framerusercontent.com/images/q02LmMvydAB6EviVZqpxKuBjsY8.png?width=1920&height=1080" alt="McLaren P1 render">
+                    </div>
+                    <div class="archive-copy">
+                        <span class="archive-type">3D Modeling</span>
+                        <h2>McLaren P1 Carbon Series</h2>
+                        <p>A first automotive study centered on surface discipline, proportion, lighting, and high-performance visual storytelling.</p>
+                        <span class="archive-link">Open case study</span>
+                    </div>
+                </a>
 
-            <!-- Connect 4 Robot - Medium -->
-            <a href="project-connect4.html" class="project-item medium" data-aos="fade-up" data-aos-delay="350">
-                <div class="project-image">
-                    <img src="https://framerusercontent.com/images/icaPN7H2pnZ8oXKwFQyu8C6sT7A.png?width=904&height=844" alt="Connect 4 Robot">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <div class="project-category">Robotics</div>
-                    <h2 class="project-title">1st Year Connect 4</h2>
-                    <p class="project-subtitle">Robot</p>
-                    <div class="project-arrow">→</div>
-                </div>
-            </a>
+                <a class="archive-card archive-card-feature glass-card" href="project-765lt.html" data-reveal>
+                    <div class="archive-figure">
+                        <img src="https://framerusercontent.com/images/gBuinG9C5ilAqEMgS4Usuk3DBxg.png?width=2560&height=1080" alt="McLaren 765LT Spider render">
+                    </div>
+                    <div class="archive-copy">
+                        <span class="archive-type">Visualization</span>
+                        <h2>McLaren 765LT Spider</h2>
+                        <p>A cinematic render study exploring motion, wet-light reflections, and atmosphere as tools for making performance feel tangible.</p>
+                        <span class="archive-link">Open case study</span>
+                    </div>
+                </a>
 
-            <!-- F1 Floor - Medium -->
-            <a href="project-f1-floor.html" class="project-item medium" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-image">
-                    <img src="https://framerusercontent.com/images/3mC4QSDiElxHAKKcS47eDNfxI.png?width=1008&height=750" alt="F1 Floor CAD Design">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <div class="project-category">Engineering</div>
-                    <h2 class="project-title">F1 Floor CAD</h2>
-                    <p class="project-subtitle">Design and CFD Analysis</p>
-                    <div class="project-arrow">→</div>
-                </div>
-            </a>
-        </div>
-    </section>
+                <a class="archive-card glass-card" href="project-f1-floor.html" data-reveal>
+                    <div class="archive-figure">
+                        <img src="https://framerusercontent.com/images/3mC4QSDiElxHAKKcS47eDNfxI.png?width=1008&height=750" alt="F1 floor CAD and CFD study">
+                    </div>
+                    <div class="archive-copy">
+                        <span class="archive-type">Engineering</span>
+                        <h2>F1 Floor CFD Study</h2>
+                        <p>Comparing ride-height sensitivity and aerodynamic behavior under the 2026 Formula 1 floor regulations.</p>
+                        <span class="archive-link">Open case study</span>
+                    </div>
+                </a>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up">
-                <h2 class="cta-title">Interested in collaboration?</h2>
-                <p class="cta-text">Let's build something exceptional together.</p>
-                <a href="mailto:grcdice@gmail.com" class="cta-button">
-                    <span>Get in Touch</span>
-                    <span class="button-arrow">→</span>
+                <a class="archive-card glass-card" href="project-connect4.html" data-reveal>
+                    <div class="archive-figure">
+                        <img src="https://framerusercontent.com/images/icaPN7H2pnZ8oXKwFQyu8C6sT7A.png?width=904&height=844" alt="Connect 4 robot">
+                    </div>
+                    <div class="archive-copy">
+                        <span class="archive-type">Robotics</span>
+                        <h2>Connect 4 Robot</h2>
+                        <p>A first-year build bringing programming, mechanical design, and interactive system logic into one physical project.</p>
+                        <span class="archive-link">Open case study</span>
+                    </div>
+                </a>
+
+                <a class="archive-card glass-card" href="project-tasty-treats.html" data-reveal>
+                    <div class="archive-figure">
+                        <img src="https://framerusercontent.com/images/fyrqEXfXK7lZElFFviiUQp9Mcd8.png?width=3773&height=2292" alt="Tasty Treats branding">
+                    </div>
+                    <div class="archive-copy">
+                        <span class="archive-type">Branding</span>
+                        <h2>Tasty Treats Bake Stand</h2>
+                        <p>A small-business identity piece balancing warmth, place, and clarity without losing restraint.</p>
+                        <span class="archive-link">Open case study</span>
+                    </div>
+                </a>
+
+                <a class="archive-card glass-card" href="project-timeline.html" data-reveal>
+                    <div class="archive-figure">
+                        <img src="https://framerusercontent.com/images/amArwx2QHDkss6snDVtDAODpQ.png?width=2868&height=1436" alt="International timeline project">
+                    </div>
+                    <div class="archive-copy">
+                        <span class="archive-type">Information Design</span>
+                        <h2>International Timeline</h2>
+                        <p>A graphic communication exercise focused on hierarchy, chronology, and making dense content easier to read.</p>
+                        <span class="archive-link">Open case study</span>
+                    </div>
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
-                </div>
+        <section class="section archive-cta-section">
+            <div class="archive-cta glass-card" data-reveal>
+                <span class="section-kicker">Next Step</span>
+                <h2>Interested in how I work behind the visuals?</h2>
+                <p>The strongest projects are usually the ones where technical reasoning and design restraint show up in the same place.</p>
+                <a class="button button-primary" href="index.html#contact">Get in touch</a>
             </div>
-        </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project archive in the same glass system.</p>
     </footer>
 
     <script src="script.js"></script>

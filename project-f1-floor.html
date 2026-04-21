@@ -3,124 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Floor CAD Design and CFD Analysis - Grace Dice</title>
+    <meta name="description" content="F1 Floor CAD and CFD analysis project by Grace Dice.">
+    <title>F1 Floor CAD and CFD Analysis | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-detail.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link active" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <a href="projects.html" class="back-button">
-            <span>←</span>
-            <span>Back to Projects</span>
-        </a>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
     </div>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="project-header-content">
-                <span class="project-category-badge">ENGINEERING</span>
-                <h1 class="project-main-title">F1 Floor CAD Design<br>and CFD Analysis</h1>
-                <p class="project-description">
-                    Self-directed engineering project exploring the impact of the 2026 FIA Formula 1 regulations on ground-effect porpoising. Using SimScale CFD simulations (steady RANS at 65 m/s) and Python-based reduced-order modeling, I compared ride-height sensitivity of downforce and pitch moment between aggressive 2023-style floors and the flatter 2026 design.
-                </p>
-                <p class="project-description">
-                    Results show ~5.7× lower aerodynamic stiffness sensitivity in 2026 (dFz/dz from −86 kN/m to +15 kN/m), leading to significantly improved damping and reduced oscillation after perturbations. Ongoing work includes transient CFD and full-vehicle coupling.
-                </p>
-                <p class="project-description">
-                    Built to deepen skills in CFD post-processing, nonlinear fitting, and vehicle dynamics analysis.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Gallery -->
-    <section class="project-gallery-section">
-        <div class="container">
-            <div class="project-images">
-                <div class="project-image-item" data-aos="fade-up">
-                    <img src="https://framerusercontent.com/images/owo4qKcmk1ISt3QveZCgDCYvMY.png?width=1524&height=1086" alt="F1 Floor CAD Model" loading="lazy">
-                </div>
-
-                <div class="project-image-item" data-aos="fade-up" data-aos-delay="50">
-                    <img src="https://framerusercontent.com/images/1NOXCMQ9cApgawrZBBwRpkCYVeY.png?width=1626&height=1072" alt="F1 Floor CFD Analysis" loading="lazy">
-                </div>
-
-                <div class="project-image-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://framerusercontent.com/images/k9kCnB08XIXjMiP29vCEqZSxszk.png?width=1008&height=750" alt="F1 Floor Detail View" loading="lazy">
-                </div>
-
-                <div class="project-image-item" data-aos="fade-up" data-aos-delay="150">
-                    <img src="https://framerusercontent.com/images/Ozb5zntdMvr0GTJVmMuk0fiab0.png?width=866&height=540" alt="F1 Floor Simulation" loading="lazy">
-                </div>
-
-                <div class="project-image-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://framerusercontent.com/images/UpUrEoFhseHoD1rgaVvbRJ3Ofns.png?width=5369&height=3568" alt="F1 Floor Analysis Results" loading="lazy">
-                </div>
-
-                <div class="project-image-item" data-aos="fade-up" data-aos-delay="250">
-                    <img src="https://framerusercontent.com/images/4aAlDoFlgODMO6gBjDtKMBFJwE.png?width=4767&height=3570" alt="F1 Floor Aerodynamic Study" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Next Project -->
-    <section class="next-project-section">
-        <div class="container">
-            <a href="projects.html" class="next-project-link">
-                <span class="next-label">View All</span>
-                <h3 class="next-title">Back to Projects</h3>
-                <span class="next-arrow">→</span>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
             </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
-                </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
-        </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Engineering</span>
+                <h1>F1 Floor CAD Design and CFD Analysis</h1>
+                <p>This self-directed study explored how the 2026 FIA Formula 1 floor regulations could affect porpoising and aerodynamic stiffness. Using SimScale CFD and reduced-order Python modeling, the work compared aggressive 2023-style floors against the flatter 2026 concept.</p>
+                <p>The outcome was a clearer picture of how ride-height sensitivity and pitch behavior change under the newer geometry, with results pointing toward significantly reduced oscillatory behavior.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Focus</span>
+                        <strong>Ground-effect floor behavior under 2026 regulation changes</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Tools</span>
+                        <strong>CAD, SimScale CFD, Python reduced-order modeling</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Result</span>
+                        <strong>Lower aerodynamic stiffness sensitivity and improved damping</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>Technical thread</h2>
+                    <p>The main question was whether the flatter 2026 floor geometry would reduce the downforce sensitivity that makes porpoising difficult to control. The analysis compared the response of force and pitch characteristics as ride height changed, then used those results to reason about dynamic stability.</p>
+                    <p>It was also an opportunity to develop stronger fluency in post-processing, fitting, and building a cleaner engineering narrative from simulation data.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Current scope</h3>
+                    <ul>
+                        <li>Steady RANS CFD at 65 m/s</li>
+                        <li>Reduced-order modeling of ride-height effects</li>
+                        <li>Ongoing direction toward transient CFD and full-vehicle coupling</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid">
+                <figure class="project-media" data-reveal><img src="https://framerusercontent.com/images/owo4qKcmk1ISt3QveZCgDCYvMY.png?width=1524&height=1086" alt="F1 floor CAD model" loading="lazy"></figure>
+                <figure class="project-media" data-reveal><img src="https://framerusercontent.com/images/1NOXCMQ9cApgawrZBBwRpkCYVeY.png?width=1626&height=1072" alt="F1 floor CFD analysis" loading="lazy"></figure>
+                <figure class="project-media" data-reveal><img src="https://framerusercontent.com/images/k9kCnB08XIXjMiP29vCEqZSxszk.png?width=1008&height=750" alt="F1 floor detail view" loading="lazy"></figure>
+                <figure class="project-media" data-reveal><img src="https://framerusercontent.com/images/Ozb5zntdMvr0GTJVmMuk0fiab0.png?width=866&height=540" alt="F1 floor simulation" loading="lazy"></figure>
+                <figure class="project-media project-media--wide" data-reveal><img src="https://framerusercontent.com/images/UpUrEoFhseHoD1rgaVvbRJ3Ofns.png?width=5369&height=3568" alt="F1 floor analysis results" loading="lazy"></figure>
+                <figure class="project-media project-media--wide" data-reveal><img src="https://framerusercontent.com/images/4aAlDoFlgODMO6gBjDtKMBFJwE.png?width=4767&height=3570" alt="F1 floor aerodynamic study" loading="lazy"></figure>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Archive</span>
+                <h2>Back to selected projects</h2>
+                <p>Return to the full archive to browse the rest of the work in the same presentation system.</p>
+                <a class="project-next-link" href="projects.html">Open project archive</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
     </footer>
 
     <script src="script.js"></script>

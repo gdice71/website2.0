@@ -3,121 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McLaren 765LT Spider - Grace Dice</title>
+    <meta name="description" content="McLaren 765LT Spider project by Grace Dice.">
+    <title>McLaren 765LT Spider | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-detail.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link active" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <a href="projects.html" class="back-button">
-            <span>←</span>
-            <span>Back to Projects</span>
-        </a>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
     </div>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="project-header-content">
-                <span class="project-category-badge">VISUALIZATION</span>
-                <h1 class="project-main-title">Lando Norris' 1-of-1 MSO<br>McLaren 765LT Spider</h1>
-                <p class="project-description">
-                    A personal project recreating Lando Norris' 1-of-1 MSO McLaren 765LT Spider, built to explore how light, motion, and design interact in 3D space.
-                </p>
-                <p class="project-description">
-                    This was my second-ever Blender project and my first time working with animation and cinematic lighting. The goal was to capture the precision, performance, and artistry that define McLaren's design language.
-                </p>
-                <p class="project-description">
-                    The full study includes both studio lighting sequences and a dynamic wet-asphalt scene rendered at 24 fps.
-                </p>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
-        </div>
-    </section>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Project Gallery -->
-    <section class="project-gallery-section">
-        <div class="container">
-            <div class="project-images">
-                <!-- Video 1 -->
-                <div class="project-video-item" data-aos="fade-up">
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Visualization</span>
+                <h1>Lando Norris’ 1-of-1 MSO McLaren 765LT Spider</h1>
+                <p>This project pushed further into cinematic rendering, combining studio sequences with a wet-asphalt environment to study how speed, reflection, and lighting can shape a more atmospheric image.</p>
+                <p>It also marked an early step into animation and motion work, using camera flow and pacing to make the car feel engineered rather than simply displayed.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Focus</span>
+                        <strong>Motion, lighting, and cinematic automotive presentation</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Tools</span>
+                        <strong>Blender, animation, environmental rendering</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Output</span>
+                        <strong>Looped video studies and a hero still render</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>What changed from the first study</h2>
+                    <p>Compared with the P1 project, this one was less about clean static presentation and more about atmosphere. The scenes were designed to hold both precision and movement, using reflections, rain-dark surfaces, and camera rhythm to support the car’s personality.</p>
+                    <p>That made it a stronger exercise in world-building. Instead of isolating the object, the project tested how context can sharpen the read of the design itself.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Key ideas</h3>
+                    <ul>
+                        <li>Light behavior across curved automotive forms</li>
+                        <li>Motion and framing for a cinematic feel</li>
+                        <li>Balancing detail with readability in darker scenes</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid">
+                <figure class="project-media project-media--wide" data-reveal>
                     <video autoplay loop muted playsinline>
                         <source src="https://framerusercontent.com/assets/klx0LpR7IhoD2DuUDgEZ9mZRCY.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
-                </div>
-
-                <!-- Video 2 -->
-                <div class="project-video-item" data-aos="fade-up" data-aos-delay="100">
+                </figure>
+                <figure class="project-media project-media--wide" data-reveal>
                     <video autoplay loop muted playsinline>
                         <source src="https://framerusercontent.com/assets/D6PYNISZDbhbsIfN8VqdLBIfHVw.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
-                </div>
-
-                <!-- Image -->
-                <div class="project-image-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://framerusercontent.com/images/LqYypEzxMMZjUt0Hzb7C4dPFeXM.png?width=2560&height=1080" alt="McLaren 765LT Spider Render" loading="lazy">
-                </div>
+                </figure>
+                <figure class="project-media project-media--wide" data-reveal><img src="https://framerusercontent.com/images/LqYypEzxMMZjUt0Hzb7C4dPFeXM.png?width=2560&height=1080" alt="McLaren 765LT Spider render" loading="lazy"></figure>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Next Project -->
-    <section class="next-project-section">
-        <div class="container">
-            <a href="project-tasty-treats.html" class="next-project-link">
-                <span class="next-label">Next Project</span>
-                <h3 class="next-title">Tasty Treats Bake Stand</h3>
-                <span class="next-arrow">→</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
-                </div>
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Next Project</span>
+                <h2>Tasty Treats Bake Stand</h2>
+                <p>A shift from automotive visualization into small-business branding with a softer, more place-driven design problem.</p>
+                <a class="project-next-link" href="project-tasty-treats.html">Open next case study</a>
             </div>
-        </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -3,98 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Timeline - Grace Dice</title>
+    <meta name="description" content="International Timeline project by Grace Dice.">
+    <title>International Timeline | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-detail.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link active" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <a href="projects.html" class="back-button">
-            <span>←</span>
-            <span>Back to Projects</span>
-        </a>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
     </div>
 
-    <!-- Project Header -->
-    <section class="project-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="project-header-content">
-                <span class="project-category-badge">INFORMATION DESIGN</span>
-                <h1 class="project-main-title">International Timeline of Events</h1>
-                <p class="project-description">
-                    An information design project visualizing key international events across time. This timeline combines historical research with clear visual hierarchy to make complex global events accessible and engaging.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Gallery -->
-    <section class="project-gallery-section">
-        <div class="container">
-            <div class="project-images">
-                <div class="project-image-item" data-aos="fade-up">
-                    <img src="https://framerusercontent.com/images/amArwx2QHDkss6snDVtDAODpQ.png?width=2868&height=1436" alt="International Timeline" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Next Project -->
-    <section class="next-project-section">
-        <div class="container">
-            <a href="project-connect4.html" class="next-project-link">
-                <span class="next-label">Next Project</span>
-                <h3 class="next-title">Connect 4 Robot</h3>
-                <span class="next-arrow">→</span>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
             </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
-                </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
-        </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Information Design</span>
+                <h1>International Timeline of Events</h1>
+                <p>This project translates a broad set of international events into a single readable visual system. The emphasis was on chronology, hierarchy, and pacing rather than decoration.</p>
+                <p>It was a useful exercise in making dense content accessible, using spacing and structure to help a viewer move through complexity without friction.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Focus</span>
+                        <strong>Hierarchy, chronology, and information clarity</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Medium</span>
+                        <strong>Large-format visual timeline</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Goal</span>
+                        <strong>Make complex sequences understandable at a glance</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>What the project tests</h2>
+                    <p>Information design has a lot in common with engineering communication. Both depend on order, compression, and knowing what to foreground. This timeline was built with that in mind, using layout to support understanding rather than competing with it.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Primary concerns</h3>
+                    <ul>
+                        <li>Chronological flow without visual crowding</li>
+                        <li>Legible hierarchy across many events</li>
+                        <li>A single frame that still rewards close reading</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid">
+                <figure class="project-media project-media--wide" data-reveal><img src="https://framerusercontent.com/images/amArwx2QHDkss6snDVtDAODpQ.png?width=2868&height=1436" alt="International timeline project" loading="lazy"></figure>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Next Project</span>
+                <h2>Connect 4 Robot</h2>
+                <p>A return to physical systems, combining mechanical design and simple autonomous behavior in a first-year robotics build.</p>
+                <a class="project-next-link" href="project-connect4.html">Open next case study</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
     </footer>
 
     <script src="script.js"></script>
