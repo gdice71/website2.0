@@ -3,126 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing - Grace Dice</title>
+    <meta name="description" content="A curated set of writing by Grace Dice, including technical papers, academic work, and project documentation.">
+    <title>Writing | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="writing.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
             </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link active" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="header-content">
-                <span class="header-label">
-                    <span class="label-dot"></span>
-                    WRITTEN WORKS
-                </span>
-                <h1 class="page-title">Writing</h1>
-                <p class="page-subtitle">Essays, reflections, and technical documentation.</p>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="writing.html" class="nav-link active">Writing</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
-        </div>
-    </section>
 
-    <!-- Writing Grid -->
-    <section class="writing-section">
-        <div class="container">
-            <div class="writing-grid">
-                <!-- Writing Item 1 -->
-                <a href="writing-sample-1.pdf" target="_blank" class="writing-item" data-aos="fade-up">
-                    <div class="writing-preview">
-                        <img src="https://framerusercontent.com/images/dSy29O2AXsOvDI0X7s5y8hJnb60.png?width=906&height=1280" alt="Writing Sample 1" loading="lazy">
-                        <div class="writing-overlay">
-                            <span class="view-badge">VIEW PDF</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Writing Item 2 -->
-                <a href="writing-sample-2.pdf" target="_blank" class="writing-item" data-aos="fade-up" data-aos-delay="50">
-                    <div class="writing-preview">
-                        <img src="https://framerusercontent.com/images/fZjchAIZTbCHMJy5YfpizXooAG8.png?width=896&height=1156" alt="Writing Sample 2" loading="lazy">
-                        <div class="writing-overlay">
-                            <span class="view-badge">VIEW PDF</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Writing Item 3 -->
-                <a href="writing-sample-3.pdf" target="_blank" class="writing-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="writing-preview">
-                        <img src="https://framerusercontent.com/images/w45hzy0wQY5NLH5XpjC1r5iumg.png?width=882&height=1142" alt="Writing Sample 3" loading="lazy">
-                        <div class="writing-overlay">
-                            <span class="view-badge">VIEW PDF</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Writing Item 4 -->
-                <a href="writing-sample-4.pdf" target="_blank" class="writing-item" data-aos="fade-up" data-aos-delay="150">
-                    <div class="writing-preview">
-                        <img src="https://framerusercontent.com/images/i4dKr4MZoyBWJuBg4be8ChLftJE.png?width=930&height=1202" alt="Writing Sample 4" loading="lazy">
-                        <div class="writing-overlay">
-                            <span class="view-badge">VIEW PDF</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Writing Item 5 -->
-                <a href="writing-sample-5.pdf" target="_blank" class="writing-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="writing-preview">
-                        <img src="https://framerusercontent.com/images/kN1OiCiXcCPBXIXCunQC0mtWsU.png?width=942&height=1224" alt="Writing Sample 5" loading="lazy">
-                        <div class="writing-overlay">
-                            <span class="view-badge">VIEW PDF</span>
-                        </div>
-                    </div>
-                </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
+    <main>
+        <section class="section page-hero">
+            <div class="page-hero-copy" data-reveal>
+                <span class="section-kicker">Writing</span>
+                <h1>Technical papers, project documentation, and long-form analysis.</h1>
+                <p>
+                    These five pieces show a mix of engineering reasoning, research, and structured communication. Each card opens the full PDF so readers can review the original work directly.
+                </p>
+                <div class="page-hero-actions">
+                    <a class="button button-primary" href="#writing-library">Read the collection</a>
+                    <a class="button button-secondary" href="index.html#writing">Back to homepage section</a>
                 </div>
             </div>
-        </div>
+
+            <aside class="page-hero-panel glass-card" data-reveal>
+                <span class="page-panel-label">At a glance</span>
+                <div class="page-panel-list">
+                    <div class="page-panel-item">
+                        <strong>05</strong>
+                        <span>full-length pieces</span>
+                    </div>
+                    <div class="page-panel-item">
+                        <strong>PDF</strong>
+                        <span>original formatting preserved</span>
+                    </div>
+                    <div class="page-panel-item">
+                        <strong>Range</strong>
+                        <span>fire modelling, software systems, robotics, and climate analysis</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section id="writing-library" class="section">
+            <div class="section-heading" data-reveal>
+                <span class="section-kicker">Collection</span>
+                <h2>Five pieces, each available in full.</h2>
+                <p>
+                    Open any entry to read the document in a new tab. The layout stays aligned with the rest of the site, but the source material remains intact.
+                </p>
+            </div>
+
+            <div class="writing-library">
+                <a class="writing-entry glass-card" href="writing-sample-1.pdf" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="writing-thumb">
+                        <img src="https://framerusercontent.com/images/dSy29O2AXsOvDI0X7s5y8hJnb60.png?width=906&height=1280" alt="Preview of Mathematical Model for Determining Flashover in a Compartment Fire" loading="lazy">
+                    </div>
+                    <div class="writing-body">
+                        <span class="writing-meta">Technical Paper</span>
+                        <h2>Mathematical Model for Determining Flashover in a Compartment Fire</h2>
+                        <p>A formal technical study focused on modelling fire progression and the conditions that drive flashover.</p>
+                        <span class="writing-cta">Open PDF</span>
+                    </div>
+                </a>
+
+                <a class="writing-entry glass-card" href="writing-sample-2.pdf" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="writing-thumb">
+                        <img src="https://framerusercontent.com/images/fZjchAIZTbCHMJy5YfpizXooAG8.png?width=896&height=1156" alt="Preview of Design and Optimization of a Modular Crafting System in Unity Using Scriptable Objects" loading="lazy">
+                    </div>
+                    <div class="writing-body">
+                        <span class="writing-meta">Systems Design</span>
+                        <h2>Design and Optimization of a Modular Crafting System in Unity Using Scriptable Objects</h2>
+                        <p>A software-focused piece on architecture, modularity, and implementation choices inside a Unity project.</p>
+                        <span class="writing-cta">Open PDF</span>
+                    </div>
+                </a>
+
+                <a class="writing-entry glass-card" href="writing-sample-3.pdf" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="writing-thumb">
+                        <img src="https://framerusercontent.com/images/w45hzy0wQY5NLH5XpjC1r5iumg.png?width=882&height=1142" alt="Preview of Connect 4 Robot" loading="lazy">
+                    </div>
+                    <div class="writing-body">
+                        <span class="writing-meta">Project Documentation</span>
+                        <h2>Connect 4 Robot</h2>
+                        <p>Documentation for a robotics build where mechanical, software, and interaction decisions had to work together.</p>
+                        <span class="writing-cta">Open PDF</span>
+                    </div>
+                </a>
+
+                <a class="writing-entry glass-card" href="writing-sample-4.pdf" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="writing-thumb">
+                        <img src="https://framerusercontent.com/images/i4dKr4MZoyBWJuBg4be8ChLftJE.png?width=930&height=1202" alt="Preview of Climate Emissions and Mitigation in Powell River, BC" loading="lazy">
+                    </div>
+                    <div class="writing-body">
+                        <span class="writing-meta">Climate Analysis</span>
+                        <h2>Climate Emissions and Mitigation in Powell River, BC: Its Climate Downfalls</h2>
+                        <p>An analytical piece on emissions patterns, mitigation pressure points, and regional climate challenges.</p>
+                        <span class="writing-cta">Open PDF</span>
+                    </div>
+                </a>
+
+                <a class="writing-entry glass-card" href="writing-sample-5.pdf" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="writing-thumb">
+                        <img src="https://framerusercontent.com/images/kN1OiCiXcCPBXIXCunQC0mtWsU.png?width=942&height=1224" alt="Preview of Climate Impacts and Adaptation in Powell River, BC" loading="lazy">
+                    </div>
+                    <div class="writing-body">
+                        <span class="writing-meta">Adaptation Strategy</span>
+                        <h2>Climate Impacts and Adaptation in Powell River, BC: Safeguarding a Coastal Community and Its Ecosystems</h2>
+                        <p>A companion piece centered on resilience, adaptation planning, and protecting a vulnerable coastal environment.</p>
+                        <span class="writing-cta">Open PDF</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Writing with the same standards as the engineering.</p>
     </footer>
 
     <script src="script.js"></script>
