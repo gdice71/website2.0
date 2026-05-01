@@ -1,317 +1,324 @@
-import { inject } from "@vercel/analytics"
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career & Achievements - Grace Dice</title>
+    <meta name="description" content="Career highlights, experience, education, and recognition for Grace Dice.">
+    <title>Career | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="career.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; gap: 4px;">
-                <span class="logo-letter">G</span>
-                <span class="logo-letter">D</span>
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
             </a>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link" data-text="Home">Home</a>
-            <a href="career.html" class="nav-link active" data-text="Career">Career</a>
-            <a href="projects.html" class="nav-link" data-text="Projects">Projects</a>
-            <a href="gallery.html" class="nav-link" data-text="Gallery">Gallery</a>
-            <a href="writing.html" class="nav-link" data-text="Writing">Writing</a>
-        </div>
-        <div class="nav-menu-toggle">
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="header-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb orb-1"></div>
-        </div>
-        <div class="container">
-            <div class="header-content">
-                <span class="header-label">
-                    <span class="label-dot"></span>
-                    PROFESSIONAL JOURNEY
-                </span>
-                <h1 class="page-title">Career Highlights</h1>
-                <p class="page-subtitle">A record of excellence in engineering, leadership, education, and interdisciplinary creation.</p>
-            </div>
-        </div>
-    </section>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
 
-    <!-- Experience Section -->
-    <section class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">01</span>
-                <h2 class="section-title">Professional Experience</h2>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="career.html" class="nav-link active" aria-current="page">Career</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="writing.html" class="nav-link">Writing</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
 
-            <div class="timeline">
-                <!-- Experience Item 1 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">January – April 2026</div>
-                        <h3 class="timeline-title">First-Year Engineering Tutor</h3>
-                        <div class="timeline-company">University of Waterloo · ME 101</div>
-                        <ul class="timeline-details">
-                            <li>Returning to instruct first-year students, with a key role in transitioning the course curriculum to VEX IQ robotics platforms.</li>
-                            <li>Continuing to mentor in programming, mechanics, and practical application.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
 
-                <!-- Experience Item 2 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">May – August 2025</div>
-                        <h3 class="timeline-title">First-Year Engineering Tutor</h3>
-                        <div class="timeline-company">University of Waterloo · ME 101</div>
-                        <ul class="timeline-details">
-                            <li>Mentored 90+ first-year engineering students in weekly tutorials and labs, covering C++ programming, RobotC, foundational electrical circuits, mechanics, and calculus.</li>
-                            <li>Assessed assignments, provided detailed code feedback, and reinforced best practices in engineering fundamentals.</li>
-                            <li>Delivered personalized support through collaborative problem-solving, translating complex concepts into clear, practical examples to build student confidence.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience Item 3 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">2024 · Two terms (Jan–Apr & Sep–Dec)</div>
-                        <h3 class="timeline-title">Junior Mechanical Project Coordinator (Co-op)</h3>
-                        <div class="timeline-company">M.A. Bryan Engineering Inc.</div>
-                        <ul class="timeline-details">
-                            <li>Edited architectural CAD files in AutoCAD for 10+ commercial projects.</li>
-                            <li>Performed HVAC load calculations using Carrier HAP software to optimize system efficiency.</li>
-                            <li>Reviewed and approved contractor shop drawings for specification compliance.</li>
-                            <li>Calculated plumbing pipe sizing and drafted detailed mechanical drawings from red-lines, reducing revision cycles through close collaboration with senior engineers.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience Item 4 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">2022 – 2023</div>
-                        <h3 class="timeline-title">Academic Tutor & Academic Captain</h3>
-                        <div class="timeline-company">Shawnigan Lake School</div>
-                        <ul class="timeline-details">
-                            <li>Served on Academic Council and led peer tutoring program for 300+ students.</li>
-                            <li>Tutored STEM subjects and fostered a supportive academic environment in collaboration with faculty.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience Item 5 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">2019 – 2020</div>
-                        <h3 class="timeline-title">Background Acting</h3>
-                        <div class="timeline-company">Various productions (Super PupZ, Upside Down Magic)</div>
-                        <ul class="timeline-details">
-                            <li>Gained early experience in high-pressure, collaborative creative environments.</li>
-                        </ul>
-                    </div>
+    <main class="career-main">
+        <section class="section career-hero">
+            <div class="career-hero-copy" data-reveal>
+                <span class="section-kicker">Career</span>
+                <h1>Experience, teaching, and recognition presented in the same system as the rest of the site.</h1>
+                <p>
+                    This page brings professional experience, academic performance, and supporting skills into one consistent record. The emphasis is the same as everywhere else: technical clarity, structured thinking, and calm presentation.
+                </p>
+                <div class="page-hero-actions">
+                    <a class="button button-primary" href="#experience">View experience</a>
+                    <a class="button button-secondary" href="#recognition">See recognition</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">02</span>
-                <h2 class="section-title">Skills & Tools</h2>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category" data-aos="fade-up">
-                    <h3 class="skill-category-title">Technical</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">SOLIDWORKS</span>
-                        <span class="skill-tag">Fusion 360</span>
-                        <span class="skill-tag">AutoCAD</span>
-                        <span class="skill-tag">Blender</span>
-                        <span class="skill-tag">Carrier HAP</span>
-                        <span class="skill-tag">Unity</span>
-                        <span class="skill-tag">Photoshop</span>
-                        <span class="skill-tag">VEX IQ Robotics</span>
+            <aside class="career-hero-panel glass-card" data-reveal>
+                <span class="page-panel-label">At a glance</span>
+                <div class="page-panel-list">
+                    <div class="page-panel-item">
+                        <strong>05</strong>
+                        <span>roles across tutoring, coordination, leadership, and creative production</span>
+                    </div>
+                    <div class="page-panel-item">
+                        <strong>2023-2028</strong>
+                        <span>mechanical engineering degree in progress at the University of Waterloo</span>
+                    </div>
+                    <div class="page-panel-item">
+                        <strong>Focus</strong>
+                        <span>mechanical design, systems thinking, technical communication, and mentoring</span>
                     </div>
                 </div>
+            </aside>
+        </section>
 
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="skill-category-title">Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">RobotC</span>
-                        <span class="skill-tag">C#</span>
-                    </div>
-                </div>
-
-                <div class="skill-category full-width" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="skill-category-title">Core Competencies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Mechanical Design</span>
-                        <span class="skill-tag">HVAC Systems</span>
-                        <span class="skill-tag">Project Coordination</span>
-                        <span class="skill-tag">3D Modeling & Visualization</span>
-                        <span class="skill-tag">Mentoring & Instruction</span>
-                        <span class="skill-tag">Curriculum Development</span>
-                        <span class="skill-tag">Systems Thinking</span>
-                        <span class="skill-tag">Technical Communication</span>
-                        <span class="skill-tag">Interdisciplinary Collaboration</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="education-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">03</span>
-                <h2 class="section-title">Education</h2>
+        <section id="experience" class="section">
+            <div class="section-heading" data-reveal>
+                <span class="section-kicker">Experience</span>
+                <h2>Professional work with a clear throughline: precision, support, and execution.</h2>
+                <p>
+                    The roles below span engineering coordination, instruction, academic leadership, and production environments. Across each one, the work centered on reliability, collaboration, and clear decision-making.
+                </p>
             </div>
 
-            <div class="education-grid">
-                <div class="education-card" data-aos="fade-up">
-                    <div class="edu-period">2023 – 2028 (Expected)</div>
-                    <h3 class="edu-title">Bachelor of Science in Mechanical Engineering</h3>
-                    <div class="edu-institution">University of Waterloo · Co-operative Program</div>
-                    <p class="edu-detail">Admitted to Canada's top-ranked Mechanical Engineering program.</p>
-                </div>
-
-                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="edu-period">2018 – 2023</div>
-                    <h3 class="edu-title">Double Dogwood Diploma (English & French)</h3>
-                    <div class="edu-institution">Shawnigan Lake School</div>
-                    <div class="edu-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-label">GPA</span>
-                            <span class="highlight-value">3.99/4.0</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-label">Recognition</span>
-                            <span class="highlight-value">Headmaster's Honour Roll (2018–2023)</span>
+            <div class="experience-list">
+                <article class="timeline-entry glass-card" data-reveal>
+                    <div class="timeline-entry-top">
+                        <span class="timeline-period">January-April 2026</span>
+                        <div>
+                            <h3>First-Year Engineering Tutor</h3>
+                            <p>University of Waterloo · ME 101</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <ul class="detail-list">
+                        <li>Returned to instruct first-year students, with a key role in transitioning the course curriculum to VEX IQ robotics platforms.</li>
+                        <li>Continued mentoring in programming, mechanics, and hands-on problem solving.</li>
+                    </ul>
+                </article>
 
-    <!-- Awards Section -->
-    <section class="awards-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">04</span>
-                <h2 class="section-title">Awards & Recognition</h2>
-            </div>
-
-            <div class="awards-grid">
-                <div class="award-card featured" data-aos="zoom-in">
-                    <div class="award-year">2023</div>
-                    <h3 class="award-title">The Robertson Award</h3>
-                    <div class="award-institution">Shawnigan Lake School</div>
-                    <p class="award-description">Highest recognition for most fully embodying curiosity, community, compassion, and courage.</p>
-                </div>
-
-                <div class="award-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="award-year">2020 – 2023</div>
-                    <h3 class="award-title">Gerald R.B. Coultas Scholarship</h3>
-                    <div class="award-institution">Shawnigan Lake School</div>
-                    <p class="award-description">Multi-year award for exceptional academic performance, leadership, co-curricular achievement, and community contribution.</p>
-                </div>
-
-                <div class="award-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="award-year">2023</div>
-                    <h3 class="award-title">AP Scholar with Honours</h3>
-                    <p class="award-description">Average score ≥3.25 on all AP exams; scores of 3+ on four or more exams.</p>
-                    <div class="ap-scores">
-                        <span class="ap-score">5 · 2D Design</span>
-                        <span class="ap-score">4 · Chemistry</span>
-                        <span class="ap-score">4 · Computer Science</span>
-                        <span class="ap-score">3 · French Language</span>
+                <article class="timeline-entry glass-card" data-reveal>
+                    <div class="timeline-entry-top">
+                        <span class="timeline-period">May-August 2025</span>
+                        <div>
+                            <h3>First-Year Engineering Tutor</h3>
+                            <p>University of Waterloo · ME 101</p>
+                        </div>
                     </div>
-                </div>
+                    <ul class="detail-list">
+                        <li>Mentored more than 90 first-year engineering students in tutorials and labs covering C++, RobotC, electrical circuits, mechanics, and calculus.</li>
+                        <li>Assessed assignments, gave detailed code feedback, and reinforced strong engineering fundamentals.</li>
+                        <li>Delivered one-on-one support through collaborative problem-solving and practical examples.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-entry glass-card" data-reveal>
+                    <div class="timeline-entry-top">
+                        <span class="timeline-period">2024 · Two terms</span>
+                        <div>
+                            <h3>Junior Mechanical Project Coordinator (Co-op)</h3>
+                            <p>M.A. Bryan Engineering Inc.</p>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Edited architectural CAD files in AutoCAD for more than 10 commercial projects.</li>
+                        <li>Performed HVAC load calculations in Carrier HAP to support system sizing and efficiency decisions.</li>
+                        <li>Reviewed contractor shop drawings for compliance and drafted mechanical drawings from red-lines.</li>
+                        <li>Calculated plumbing pipe sizing and reduced revision cycles through close coordination with senior engineers.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-entry glass-card" data-reveal>
+                    <div class="timeline-entry-top">
+                        <span class="timeline-period">2022-2023</span>
+                        <div>
+                            <h3>Academic Tutor and Academic Captain</h3>
+                            <p>Shawnigan Lake School</p>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Served on Academic Council and helped lead a peer tutoring program supporting more than 300 students.</li>
+                        <li>Tutored STEM subjects and built a supportive academic environment alongside faculty.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-entry glass-card" data-reveal>
+                    <div class="timeline-entry-top">
+                        <span class="timeline-period">2019-2020</span>
+                        <div>
+                            <h3>Background Acting</h3>
+                            <p>Various productions, including Super PupZ and Upside Down Magic</p>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>Gained early experience working inside high-pressure, highly collaborative creative productions.</li>
+                    </ul>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- International Experience -->
-    <section class="international-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">05</span>
-                <h2 class="section-title">International Experience</h2>
+        <section class="section">
+            <div class="section-heading" data-reveal>
+                <span class="section-kicker">Skills</span>
+                <h2>Tools and strengths that support both engineering and communication.</h2>
+                <p>
+                    The toolkit is broad, but the emphasis stays practical: software, programming, and collaboration methods that hold up in real work.
+                </p>
             </div>
 
-            <div class="international-content">
-                <div class="international-card" data-aos="fade-up">
-                    <div class="intl-year">2023</div>
-                    <h3 class="intl-title">Academic Exchange</h3>
-                    <div class="intl-location">Lycée du Sacré-Cœur, Angers, France</div>
-                    <p class="intl-description">Full immersion program.</p>
-                </div>
+            <div class="skills-layout">
+                <article class="skill-card glass-card" data-reveal>
+                    <span class="card-label">Technical Tools</span>
+                    <div class="tag-list">
+                        <span class="tag">SOLIDWORKS</span>
+                        <span class="tag">Fusion 360</span>
+                        <span class="tag">AutoCAD</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">Carrier HAP</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">Photoshop</span>
+                        <span class="tag">VEX IQ Robotics</span>
+                    </div>
+                </article>
 
-                <div class="languages-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="languages-title">Languages</h3>
+                <article class="skill-card glass-card" data-reveal>
+                    <span class="card-label">Programming</span>
+                    <div class="tag-list">
+                        <span class="tag">C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">RobotC</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </article>
+
+                <article class="skill-card glass-card skill-card-wide" data-reveal>
+                    <span class="card-label">Core Competencies</span>
+                    <div class="tag-list">
+                        <span class="tag">Mechanical Design</span>
+                        <span class="tag">HVAC Systems</span>
+                        <span class="tag">Project Coordination</span>
+                        <span class="tag">3D Modeling and Visualization</span>
+                        <span class="tag">Mentoring and Instruction</span>
+                        <span class="tag">Curriculum Development</span>
+                        <span class="tag">Systems Thinking</span>
+                        <span class="tag">Technical Communication</span>
+                        <span class="tag">Interdisciplinary Collaboration</span>
+                    </div>
+                </article>
+
+                <article class="skill-card glass-card" data-reveal>
+                    <span class="card-label">Languages</span>
                     <div class="language-list">
                         <div class="language-item">
-                            <span class="language-name">English</span>
-                            <span class="language-level">Native</span>
+                            <strong>English</strong>
+                            <span>Native</span>
                         </div>
                         <div class="language-item">
-                            <span class="language-name">French</span>
-                            <span class="language-level">DELF B2 · Intermediate-Advanced</span>
+                            <strong>French</strong>
+                            <span>DELF B2 · Intermediate-Advanced</span>
                         </div>
                         <div class="language-item">
-                            <span class="language-name">European Portuguese</span>
-                            <span class="language-level">Learning</span>
+                            <strong>European Portuguese</strong>
+                            <span>Learning</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span>© 2026 Grace Dice</span>
-                </div>
-                <div class="footer-right">
-                    <a href="mailto:grcdice@gmail.com">grcdice@gmail.com</a>
-                </div>
+        <section class="section">
+            <div class="section-heading" data-reveal>
+                <span class="section-kicker">Education</span>
+                <h2>Academic performance with depth in both engineering and broader scholarship.</h2>
+                <p>
+                    Formal education has been paired with strong grades, bilingual study, and a consistent record of recognition.
+                </p>
             </div>
-        </div>
+
+            <div class="credentials-grid">
+                <article class="credential-card glass-card" data-reveal>
+                    <span class="timeline-period">2023-2028 Expected</span>
+                    <h3>Bachelor of Science in Mechanical Engineering</h3>
+                    <p class="credential-meta">University of Waterloo · Co-operative Program</p>
+                    <p>Admitted to Canada&apos;s top-ranked mechanical engineering program and building experience through academic and co-op work.</p>
+                </article>
+
+                <article class="credential-card glass-card" data-reveal>
+                    <span class="timeline-period">2018-2023</span>
+                    <h3>Double Dogwood Diploma, English and French</h3>
+                    <p class="credential-meta">Shawnigan Lake School</p>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <span>GPA</span>
+                            <strong>3.99 / 4.0</strong>
+                        </div>
+                        <div class="metric-item">
+                            <span>Recognition</span>
+                            <strong>Headmaster&apos;s Honour Roll, 2018-2023</strong>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="recognition" class="section">
+            <div class="section-heading" data-reveal>
+                <span class="section-kicker">Recognition</span>
+                <h2>Awards, academic distinction, and international study.</h2>
+                <p>
+                    This section captures external recognition alongside the broader experiences that shaped perspective and discipline.
+                </p>
+            </div>
+
+            <div class="recognition-grid">
+                <article class="recognition-card glass-card recognition-card-featured" data-reveal>
+                    <span class="timeline-period">2023</span>
+                    <h3>The Robertson Award</h3>
+                    <p class="credential-meta">Shawnigan Lake School</p>
+                    <p>Highest recognition for most fully embodying curiosity, community, compassion, and courage.</p>
+                </article>
+
+                <article class="recognition-card glass-card" data-reveal>
+                    <span class="timeline-period">2020-2023</span>
+                    <h3>Gerald R.B. Coultas Scholarship</h3>
+                    <p class="credential-meta">Shawnigan Lake School</p>
+                    <p>Multi-year award for academic performance, leadership, co-curricular achievement, and community contribution.</p>
+                </article>
+
+                <article class="recognition-card glass-card" data-reveal>
+                    <span class="timeline-period">2023</span>
+                    <h3>AP Scholar with Honours</h3>
+                    <p>Average score of at least 3.25 across all AP exams, with scores of 3 or higher on four or more exams.</p>
+                    <div class="tag-list compact-tags">
+                        <span class="tag">5 · 2D Design</span>
+                        <span class="tag">4 · Chemistry</span>
+                        <span class="tag">4 · Computer Science</span>
+                        <span class="tag">3 · French Language</span>
+                    </div>
+                </article>
+
+                <article class="recognition-card glass-card recognition-card-wide" data-reveal>
+                    <span class="timeline-period">2023</span>
+                    <h3>Academic Exchange</h3>
+                    <p class="credential-meta">Lycee du Sacre-Coeur, Angers, France</p>
+                    <p>Full immersion exchange experience that strengthened language skills, adaptability, and cross-cultural communication.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Career record in the same glass system.</p>
     </footer>
 
     <script src="script.js"></script>
