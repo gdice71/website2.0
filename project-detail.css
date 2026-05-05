@@ -152,6 +152,11 @@
     gap: 18px;
 }
 
+.project-gallery-grid--single {
+    grid-template-columns: minmax(0, 760px);
+    justify-content: center;
+}
+
 .project-media {
     overflow: hidden;
     background: var(--surface);
@@ -177,6 +182,10 @@
 
 .project-media--wide {
     grid-column: 1 / -1;
+}
+
+.project-media--portrait {
+    justify-self: center;
 }
 
 .project-note-card,
