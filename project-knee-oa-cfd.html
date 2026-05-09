@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5V3WB974JP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5V3WB974JP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Knee osteoarthritis synovial fluid CFD study by Grace Dice.">
+    <title>Knee Osteoarthritis Lubrication CFD Study | Grace Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="career.html" class="nav-link">Career</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Biomechanics Research</span>
+                <h1>Knee Osteoarthritis Lubrication CFD Study</h1>
+                <p>This in-progress research project asks a mechanical question with clear clinical consequences: as osteoarthritis deforms the knee joint, how does that altered geometry change synovial fluid flow and lubrication performance? The aim is to move past generic descriptions of cartilage wear and quantify when the joint starts failing mechanically.</p>
+                <p>Using MRI-derived patient geometry across multiple Kellgren-Lawrence grades and BMI ranges, I am building 3D models of bone, cartilage, meniscus, synovial fluid, and membrane, then running CFD to compare pressure distribution, wall shear stress, flow velocity profiles, and likely lubrication breakdown points.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Question</span>
+                        <strong>How osteoarthritic deformation changes joint lubrication mechanics</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Methods</span>
+                        <strong>MRI segmentation, 3D reconstruction, CFD, comparative cohort analysis</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Status</span>
+                        <strong>In progress with segmentation review, fluid-domain preparation, and phased CFD runs</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>Technical direction</h2>
+                    <p>The workflow starts with MRI data and segmentation. Bone and cartilage masks come from the OAIZIB-CM dataset and are manually reviewed at articular surfaces where boundary accuracy matters most for CFD. Synovial fluid is segmented manually from proton-density fat-saturated MRI so the fluid domain reflects the actual joint space rather than an idealized gap.</p>
+                    <p>The comparison axes are disease severity and BMI. Age and sex will be handled as acknowledged limitations rather than perfectly controlled variables, which is the more defensible approach at this cohort size. If needed computationally, the mid-BMI column stands on its own as a publishable progression study before extending to lean and high-BMI cases.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Current outputs</h3>
+                    <ul>
+                        <li>Pressure distribution in the synovial fluid domain</li>
+                        <li>Wall shear stress on cartilage surfaces</li>
+                        <li>Fluid velocity profiles through the joint space</li>
+                        <li>Candidate lubrication breakdown regions across OA stages</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid project-gallery-grid--single">
+                <figure class="project-media project-media--wide" data-reveal>
+                    <img src="knee-oa-segmentation.png" alt="MRI segmentation and 3D reconstruction of femur, cartilage, tibia, meniscus, and synovial membrane for a knee osteoarthritis CFD study" loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>In plain language</h2>
+                    <p>A healthy knee depends on a thin layer of synovial fluid to help the cartilage surfaces slide smoothly against each other. This project looks at whether osteoarthritis changes the joint shape enough that the fluid can no longer spread pressure properly or protect the cartilage the way it should.</p>
+                    <p>In simpler terms, I am testing whether worn joints stop lubricating themselves effectively before total failure is obvious on a scan. That could help explain why some knees suddenly become much more painful or mechanically unstable, and why timing matters when deciding on treatment or surgery.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Model components</h3>
+                    <ul>
+                        <li>Femur and femoral cartilage</li>
+                        <li>Tibia with medial and lateral tibial cartilage</li>
+                        <li>Meniscus</li>
+                        <li>Synovial fluid and synovial membrane</li>
+                        <li>Ligaments omitted to avoid unreliable segmentation noise</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-story-grid">
+                <article class="project-note-card glass-card" data-reveal>
+                    <h3>Why the angle is novel</h3>
+                    <p>Most discussions of osteoarthritis stay descriptive: cartilage thins, bone changes, symptoms worsen. This project treats the knee as a mechanical fluid-lubrication system and asks how real patient geometry changes that system over time. To my knowledge, there is limited computational work comparing multiple disease stages and BMI ranges with patient-specific geometry in this exact way.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Next steps</h3>
+                    <ul>
+                        <li>Complete the first matched-BMI disease progression set</li>
+                        <li>Generate clearer post-processing plots for stress and flow</li>
+                        <li>Create animated streamline or pathline visualizations of synovial fluid motion</li>
+                        <li>Translate selected findings into patient-friendly graphics and copy</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Archive</span>
+                <h2>Back to selected projects</h2>
+                <p>Return to the full archive to browse the rest of the portfolio and research work in the same presentation system.</p>
+                <a class="project-next-link" href="projects.html">Open project archive</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
