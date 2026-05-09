@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5V3WB974JP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5V3WB974JP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UW First-Year Engineering Help Desk System project by Grace Dice.">
+    <title>UW Engineering Help Desk System | Grace Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="career.html" class="nav-link">Career</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Full-Stack Web App</span>
+                <h1>UW Engineering Help Desk System</h1>
+                <p>This project was built for the University of Waterloo First-Year Engineering office to replace a manual student-visit workflow with a structured internal web app. Staff needed a faster way to log visits, review demand patterns, and keep the data exportable for follow-up and reporting.</p>
+                <p>I built the system in Flask with SQLite, authentication, and CSV export, then shaped the interface around the office&apos;s day-to-day workflow. The result is a production tool that supports real student traffic instead of a one-off demo.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Focus</span>
+                        <strong>Internal visit logging and analytics for first-year engineering support</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Stack</span>
+                        <strong>Flask, SQLite, authentication, CSV export, dashboard UI</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Outcome</span>
+                        <strong>Used in production by the First-Year Engineering office</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>Built around an office workflow</h2>
+                    <p>The app was designed for speed and clarity. Staff can create academic terms, log sessions against course and program context, and immediately review demand through a dashboard instead of piecing together activity by hand.</p>
+                    <p>That framing mattered more than surface polish alone. The system had to be easy to use during busy office hours, reliable enough for repeated daily use, and structured enough to produce useful records afterward.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Key capabilities</h3>
+                    <ul>
+                        <li>User authentication for controlled internal access</li>
+                        <li>SQLite-backed visit logging tied to term and course data</li>
+                        <li>Dashboard views for totals, help rates, and usage patterns</li>
+                        <li>CSV export for downstream reporting and record keeping</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid">
+                <figure class="project-media" data-reveal>
+                    <img src="help-desk-terms.png" alt="Term creation screen for the UW engineering help desk system" loading="lazy">
+                </figure>
+                <figure class="project-media" data-reveal>
+                    <img src="help-desk-dashboard.png" alt="Course and session logging dashboard for the UW engineering help desk system" loading="lazy">
+                </figure>
+                <figure class="project-media project-media--wide" data-reveal>
+                    <img src="help-desk-analytics.png" alt="Analytics dashboard showing visit metrics for the UW engineering help desk system" loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Next Project</span>
+                <h2>Connect 4 Robot</h2>
+                <p>A first-year robotics build focused on mechanical structure, sensing, and interactive game logic.</p>
+                <a class="project-next-link" href="project-connect4.html">Open next case study</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
