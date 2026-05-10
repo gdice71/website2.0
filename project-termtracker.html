@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5V3WB974JP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5V3WB974JP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TermTracker macOS app by Grace Dice.">
+    <title>TermTracker | Grace Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home">
+                <span class="brand-mark">GD</span>
+                <span class="brand-text">Grace Dice</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="career.html" class="nav-link">Career</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="index.html#apps" class="nav-link active" aria-current="page">Apps</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a class="nav-cta" href="index.html#contact">Start a conversation</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Native macOS App</span>
+                <h1>TermTracker</h1>
+                <p>TermTracker is a desktop app built around the way a real university term actually works. Instead of scattering deadlines, grades, notes, topics, and planning across several tools, it brings them into one native macOS workspace designed for course-heavy schedules.</p>
+                <p>The app is structured around the rhythm of an academic term: dashboard views, course pages, weighted assessments, topic tracking, notes, and timetable context. The goal is less friction and better visibility when the workload starts stacking up.</p>
+            </div>
+
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span>Focus</span>
+                        <strong>Desktop-first academic planning and course management</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Core Views</span>
+                        <strong>Dashboard, courses, grades, notes, and timetable</strong>
+                    </div>
+                    <div class="project-meta-item">
+                        <span>Current Build</span>
+                        <strong>Working macOS app with term, course, and assessment workflows</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-note-card glass-card" data-reveal>
+                    <h3>Download TermTracker</h3>
+                    <p>The current build is available as a direct macOS `.zip` download.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="TermTracker.zip" download>Download TermTracker</a>
+                    </div>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Before opening</h3>
+                    <ul>
+                        <li>This app is not notarized through Apple yet</li>
+                        <li>macOS may warn that it cannot verify the developer the first time you open it</li>
+                        <li>Control-click the app, choose Open, then click Open again to confirm</li>
+                        <li>If needed, go to System Settings &gt; Privacy &amp; Security and choose Open Anyway</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>Built around academic reality</h2>
+                    <p>The strongest part of the app is that it is specific. It is not a generic task manager with classes renamed as projects. It is designed around how a term unfolds: multiple courses, weighted assessments, grace-day limits, lecture topics, readings, and the need to understand where effort is building before things get messy.</p>
+                    <p>That makes the interface calmer because the structure is already doing part of the thinking for the user. The app keeps course context visible while still making deadlines and grades easy to review at a glance.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>What it handles</h3>
+                    <ul>
+                        <li>Term setup with courses and date ranges</li>
+                        <li>Weighted assessments and alternate marking schemes</li>
+                        <li>Topic and reading tracking inside each course</li>
+                        <li>Dashboard summaries for deadlines and progress</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-gallery-grid">
+                <figure class="project-media project-media--wide" data-reveal>
+                    <img src="termtracker-dashboard.png" alt="TermTracker dashboard showing courses, deadlines, and grace day information" loading="lazy">
+                </figure>
+                <figure class="project-media" data-reveal>
+                    <img src="termtracker-grades.png" alt="TermTracker grades view showing weighted course assessments" loading="lazy">
+                </figure>
+                <figure class="project-media" data-reveal>
+                    <img src="termtracker-topics.png" alt="TermTracker course topics view showing lecture topics and readings" loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <section class="section project-gallery">
+            <div class="project-story-grid">
+                <article class="project-note-card glass-card" data-reveal>
+                    <h3>Why it matters</h3>
+                    <p>Most academic organization tools are either too broad or too mobile-first. This project pushes in the other direction: a native desktop tool that assumes the user is actively managing a full term, comparing course weightings, checking deadlines, and working with more detail than a simple to-do list can hold cleanly.</p>
+                </article>
+
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Next directions</h3>
+                    <ul>
+                        <li>Expand the notes and study workflow</li>
+                        <li>Refine timetable integration across terms</li>
+                        <li>Improve longer-term planning and review views</li>
+                        <li>Continue polishing the native macOS interaction model</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Back</span>
+                <h2>Return to the homepage apps section</h2>
+                <p>Go back to the homepage to see how the app sits alongside the rest of the portfolio.</p>
+                <a class="project-next-link" href="index.html#apps">Open macOS apps section</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Grace Dice</p>
+        <p>Project detail in the glass system.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
