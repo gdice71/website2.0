@@ -14,23 +14,25 @@ if (prefersReducedMotion) {
     body.classList.add('reduce-motion');
 }
 
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('theme-dark');
+localStorage.removeItem('theme');
+
+const savedTheme = localStorage.getItem('site-theme');
+if (savedTheme === 'light') {
+    body.classList.add('theme-light');
 }
 
 const syncThemeToggle = () => {
-    const isDark = body.classList.contains('theme-dark');
+    const isDark = !body.classList.contains('theme-light');
     themeToggle?.setAttribute('aria-pressed', String(isDark));
-    themeToggle?.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to darker grey theme');
+    themeToggle?.setAttribute('aria-label', isDark ? 'Switch to orange light theme' : 'Switch to dark navy theme');
 };
 
 syncThemeToggle();
 
 themeToggle?.addEventListener('click', () => {
-    body.classList.toggle('theme-dark');
-    const theme = body.classList.contains('theme-dark') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
+    body.classList.toggle('theme-light');
+    const theme = body.classList.contains('theme-light') ? 'light' : 'dark';
+    localStorage.setItem('site-theme', theme);
     syncThemeToggle();
 });
 

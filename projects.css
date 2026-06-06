@@ -90,6 +90,14 @@
     aspect-ratio: 3 / 4;
 }
 
+.archive-card-nicu .archive-figure img {
+    filter: grayscale(1) saturate(0.2) contrast(1.02);
+}
+
+.archive-card-nicu:hover .archive-figure img {
+    filter: grayscale(1) saturate(0.2) contrast(1.02);
+}
+
 .archive-figure {
     position: relative;
     min-height: 280px;
