@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Knee osteoarthritis synovial fluid CFD study by Grace Dice.">
-    <title>Knee Osteoarthritis Lubrication CFD Study | Grace Dice</title>
+    <meta name="description" content="Computational modeling of synovial fluid mechanics in osteoarthritis by Grace Dice.">
+    <title>Computational Modeling of Synovial Fluid Mechanics in Osteoarthritis | Grace Dice</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-detail.css">
 </head>
@@ -57,24 +57,24 @@
         <section class="section project-hero">
             <div class="project-hero-copy" data-reveal>
                 <span class="project-kicker">Biomechanics Research</span>
-                <h1>Knee Osteoarthritis Lubrication CFD Study</h1>
-                <p>This in-progress research project asks a mechanical question with clear clinical consequences: as osteoarthritis deforms the knee joint, how does that altered geometry change synovial fluid flow and lubrication performance? The aim is to move past generic descriptions of cartilage wear and quantify when the joint starts failing mechanically.</p>
-                <p>Using MRI-derived patient geometry across multiple Kellgren-Lawrence grades and BMI ranges, I am building 3D models of bone, cartilage, meniscus, synovial fluid, and membrane, then running CFD to compare pressure distribution, wall shear stress, flow velocity profiles, and likely lubrication breakdown points.</p>
+                <h1>Computational Modeling of Synovial Fluid Mechanics in Osteoarthritis</h1>
+                <p>I am developing a physics-informed inference framework that constrains plausible synovial fluid rheological states using patient-specific knee geometry and biological observations. The pipeline moves from MRI-derived knee geometry through a patient-specific CFD sweep and a Gaussian process surrogate, into a Bayesian inversion that weighs candidate fluid parameters against each patient's own biomarker data.</p>
+                <p>Rather than claiming to calculate synovial fluid viscosity directly from a scan, the goal is narrower and more defensible: use patient geometry and non-invasive biology to narrow down which rheological states are plausible, and be explicit about where the data leaves real ambiguity.</p>
             </div>
 
             <aside class="project-summary-card glass-card" data-reveal>
                 <div class="project-meta">
                     <div class="project-meta-item">
                         <span>Question</span>
-                        <strong>How osteoarthritic deformation changes joint lubrication mechanics</strong>
+                        <strong>Can patient-specific imaging and biomarkers constrain plausible synovial fluid rheological states through physics-based modeling?</strong>
                     </div>
                     <div class="project-meta-item">
                         <span>Methods</span>
-                        <strong>MRI segmentation, 3D reconstruction, CFD, comparative cohort analysis</strong>
+                        <strong>ITK-SNAP segmentation, OpenFOAM CFD (Bird-Carreau rheology), Gaussian process surrogate modeling, Bayesian inversion</strong>
                     </div>
                     <div class="project-meta-item">
                         <span>Status</span>
-                        <strong>In progress with segmentation review, fluid-domain preparation, and phased CFD runs</strong>
+                        <strong>Segmenting and reconstructing patient-specific knee geometry from OAI MRI data ahead of the CFD sweep</strong>
                     </div>
                 </div>
             </aside>
@@ -84,17 +84,17 @@
             <div class="project-story-grid">
                 <article class="project-story-card glass-card" data-reveal>
                     <h2>Technical direction</h2>
-                    <p>The workflow starts with MRI data and segmentation. Bone and cartilage masks come from the OAIZIB-CM dataset and are manually reviewed at articular surfaces where boundary accuracy matters most for CFD. Synovial fluid is segmented manually from proton-density fat-saturated MRI so the fluid domain reflects the actual joint space rather than an idealized gap.</p>
-                    <p>The comparison axes are disease severity and BMI. Age and sex will be handled as acknowledged limitations rather than perfectly controlled variables, which is the more defensible approach at this cohort size. If needed computationally, the mid-BMI column stands on its own as a publishable progression study before extending to lean and high-BMI cases.</p>
+                    <p>The project splits into two coupled halves. The forward physics half takes patient-specific geometry, segmented from OAI knee MRI in ITK-SNAP, and runs a Latin Hypercube sweep of CFD simulations in OpenFOAM across a range of hypothetical fluid parameters, using a Bird-Carreau (Carreau-Yasuda) description of synovial fluid rather than treating it as a simple Newtonian lubricant. A Gaussian process surrogate is then trained per patient to interpolate between sweep points cheaply.</p>
+                    <p>The inverse half uses that surrogate, together with a cohort-level model linking mechanics to biomarkers, to run a Bayesian inversion: rather than solving for a single "true" viscosity, it produces a posterior distribution over plausible fluid parameters for each patient, conditioned on their own hyaluronic acid and MMP-3 measurements.</p>
                 </article>
 
                 <aside class="project-sidebar-card glass-card" data-reveal>
-                    <h3>Current outputs</h3>
+                    <h3>Current stage</h3>
                     <ul>
-                        <li>Pressure distribution in the synovial fluid domain</li>
-                        <li>Wall shear stress on cartilage surfaces</li>
-                        <li>Fluid velocity profiles through the joint space</li>
-                        <li>Candidate lubrication breakdown regions across OA stages</li>
+                        <li>ITK-SNAP segmentation of femur cartilage, tibia cartilage, and joint capsule per patient</li>
+                        <li>Mesh cleanup and watertightness checks (MeshLab/Blender, trimesh)</li>
+                        <li>Physiological plausibility checks on segmented cavity volumes</li>
+                        <li>Pinning down boundary condition and loading assumptions ahead of the CFD sweep</li>
                     </ul>
                 </aside>
             </div>
@@ -110,18 +110,18 @@
             <div class="project-story-grid">
                 <article class="project-story-card glass-card" data-reveal>
                     <h2>In plain language</h2>
-                    <p>A healthy knee depends on a thin layer of synovial fluid to help the cartilage surfaces slide smoothly against each other. This project looks at whether osteoarthritis changes the joint shape enough that the fluid can no longer spread pressure properly or protect the cartilage the way it should.</p>
-                    <p>In simpler terms, I am testing whether worn joints stop lubricating themselves effectively before total failure is obvious on a scan. That could help explain why some knees suddenly become much more painful or mechanically unstable, and why timing matters when deciding on treatment or surgery.</p>
+                    <p>A standard MRI can show structural damage in a knee, but it does not directly explain the mechanical state of the joint. This project asks whether computational modeling can use MRI-derived geometry, combined with a patient's own biomarkers, to narrow down how synovial fluid is likely behaving inside an osteoarthritic knee.</p>
+                    <p>The honest output isn't a single number for viscosity, it's a range of plausible fluid behaviors for that patient, weighted by how well each one fits their biology. That range, and how it shifts across a small patient cohort, is what the project treats as the real result.</p>
                 </article>
 
                 <aside class="project-sidebar-card glass-card" data-reveal>
-                    <h3>Model components</h3>
+                    <h3>Framework components</h3>
                     <ul>
-                        <li>Femur and femoral cartilage</li>
-                        <li>Tibia with medial and lateral tibial cartilage</li>
-                        <li>Meniscus</li>
-                        <li>Synovial fluid and synovial membrane</li>
-                        <li>Ligaments omitted to avoid unreliable segmentation noise</li>
+                        <li>MRI-derived, patient-specific knee geometry (ITK-SNAP segmentation)</li>
+                        <li>Patient-specific CFD sweep in OpenFOAM (Bird-Carreau rheology, Latin Hypercube sampling)</li>
+                        <li>Per-patient Gaussian process surrogate over the sweep</li>
+                        <li>Cohort-level mechanics-to-biomarker regression</li>
+                        <li>Bayesian inversion producing a posterior over rheological parameters per patient</li>
                     </ul>
                 </aside>
             </div>
@@ -129,16 +129,16 @@
             <div class="project-story-grid">
                 <article class="project-note-card glass-card" data-reveal>
                     <h3>Why the angle is novel</h3>
-                    <p>Most discussions of osteoarthritis stay descriptive: cartilage thins, bone changes, symptoms worsen. This project treats the knee as a mechanical fluid-lubrication system and asks how real patient geometry changes that system over time. To my knowledge, there is limited computational work comparing multiple disease stages and BMI ranges with patient-specific geometry in this exact way.</p>
+                    <p>Most osteoarthritis characterization separates structural imaging, joint biomechanics, and biochemical markers. This project treats the knee as a coupled biological-mechanical system, using a non-identifiability-aware Bayesian framework so that when multiple fluid states explain a patient's biology equally well, that ambiguity shows up honestly as a wide posterior rather than a single overconfident number.</p>
                 </article>
 
                 <aside class="project-sidebar-card glass-card" data-reveal>
                     <h3>Next steps</h3>
                     <ul>
-                        <li>Complete the first matched-BMI disease progression set</li>
-                        <li>Generate clearer post-processing plots for stress and flow</li>
-                        <li>Create animated streamline or pathline visualizations of synovial fluid motion</li>
-                        <li>Translate selected findings into patient-friendly graphics and copy</li>
+                        <li>Finish segmentation and geometry QC across the full patient cohort</li>
+                        <li>Run a mesh convergence study and finalize boundary conditions (moving cartilage surfaces, oscillatory loading)</li>
+                        <li>Execute the per-patient CFD sweep and train Gaussian process surrogates</li>
+                        <li>Run the Bayesian inversion and check inferred rheology against KL grade and MMP-3</li>
                     </ul>
                 </aside>
             </div>

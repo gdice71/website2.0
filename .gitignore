@@ -1,1 +1,3 @@
-.DS_Store # optional: prevent it forever
+.DS_Store
+._*
+.vscode/.DS_Store # optional: prevent it forever
