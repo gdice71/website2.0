@@ -506,36 +506,10 @@ textarea:focus-visible {
     position: relative;
 }
 
-.portrait-shell {
-    position: relative;
-    overflow: hidden;
-    border-radius: 28px;
-    aspect-ratio: 0.82;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.16));
-    border: 1px solid var(--border-subtle);
-}
-
-.portrait-shell::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 18%, rgba(255, 255, 255, 0.24) 100%);
-    pointer-events: none;
-}
-
-.hero-portrait {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .floating-note {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    width: min(260px, calc(100% - 32px));
-    padding: 16px 18px;
-    border-radius: 20px;
+    width: 100%;
+    padding: 22px;
+    border-radius: 24px;
 }
 
 .floating-note strong {
@@ -1225,12 +1199,6 @@ body.reduce-motion *::after {
 
     .hero-stats {
         grid-template-columns: 1fr;
-    }
-
-    .floating-note {
-        position: static;
-        width: 100%;
-        margin-top: 14px;
     }
 
     .site-footer {
