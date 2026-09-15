@@ -24,6 +24,13 @@
     font-size: 1.02rem;
 }
 
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
 .project-kicker {
     display: inline-block;
     margin-bottom: 16px;
