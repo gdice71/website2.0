@@ -119,6 +119,23 @@
     transition: transform 0.45s ease;
 }
 
+.archive-figure--paper {
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    color: rgba(255, 255, 255, 0.88);
+    background:
+        radial-gradient(circle at 78% 22%, rgba(146, 112, 197, 0.5), transparent 34%),
+        linear-gradient(145deg, #202c3b, #101923 72%);
+}
+
+.archive-figure--paper span {
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
 .archive-card:hover .archive-figure img {
     transform: scale(1.03);
 }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An exploratory Bayesian uncertainty study using a dyadic shell model by Grace Dice.">
+    <title>Dyadic Shell Model: Posterior Uncertainty | Grace Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+    <div class="page-background" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="noise-layer"></div>
+    </div>
+
+    <header class="site-header">
+        <nav class="glass-nav" aria-label="Primary navigation">
+            <a class="brand" href="index.html#home" aria-label="Grace Dice home"><span class="brand-mark">GD</span><span class="brand-text">Grace Dice</span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#study" class="nav-link">Research &amp; Study</a>
+                <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#teaching" class="nav-link">Teaching</a>
+                <a href="writing.html" class="nav-link">Writing</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch color theme"><span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span></button>
+                <a class="nav-cta" href="index.html#contact">Get in touch</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-main">
+        <section class="section project-hero">
+            <div class="project-hero-copy" data-reveal>
+                <span class="project-kicker">Computational Research · Bayesian Uncertainty</span>
+                <h1>Does Posterior Uncertainty Widen Across an Open Regularity Interval?</h1>
+                <p>This paper tests whether a Bayesian classifier’s posterior uncertainty widens in a parameter regime where a dyadic shell model’s long-term regularity is unresolved. The model has proven blow-up and regularity zones on either side of that interval, providing a testbed with known boundaries.</p>
+                <p>The result is exploratory: wider intervals appear in the open zone, but the study does not establish that uncertainty is tracking mathematical undecidability or resolve the Navier–Stokes regularity problem.</p>
+                <div class="project-actions">
+                    <a class="button button-primary" href="dyadic-shell-model-paper.pdf" target="_blank" rel="noreferrer">Read the paper</a>
+                    <a class="button button-secondary" href="#study-details">Study details</a>
+                </div>
+            </div>
+            <aside class="project-summary-card glass-card" data-reveal>
+                <div class="project-meta">
+                    <div class="project-meta-item"><span>Question</span><strong>Does posterior interval width rise in the unresolved regime?</strong></div>
+                    <div class="project-meta-item"><span>Model</span><strong>Desnyansky–Novikov dyadic shell model</strong></div>
+                    <div class="project-meta-item"><span>Method</span><strong>Resolution-sweep features and Bayesian logistic regression</strong></div>
+                    <div class="project-meta-item"><span>Status</span><strong>Exploratory study; paper available as PDF</strong></div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section project-gallery" id="study-details">
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>Question and approach</h2>
+                    <p>The damping exponent α divides the model into a proven finite-time blow-up zone below 1/3 and a proven global-regularity zone at or above 1/2. The interval between them is unresolved. The classifier was trained only on the two proven zones, using features from simulations at several shell resolutions, then evaluated across the full α range.</p>
+                    <p>Bayesian logistic regression used a Gaussian coefficient prior, with posterior sampling by a Metropolis–Hastings sampler implemented for the study. The numerical workflow also compared two time-stepping approaches at one blow-up-regime setting as a solver check.</p>
+                </article>
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Methods</h3>
+                    <ul>
+                        <li>Resolution sweeps at 15–40 shells</li>
+                        <li>Five simulation-derived features</li>
+                        <li>Bayesian logistic classifier</li>
+                        <li>Five random-seed comparisons</li>
+                        <li>Held-out replicate and boundary checks</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="project-story-grid">
+                <article class="project-story-card glass-card" data-reveal>
+                    <h2>What the results show</h2>
+                    <p>Mean credible-interval width was 0.380 in the open zone, compared with 0.047 in the blow-up zone and 0.029 in the regular zone. The open-zone widening was similar across five random seeds. Held-out replicate predictions achieved 100% accuracy on the labelled zones, including checks near both proven boundaries.</p>
+                    <p>Within the open interval, width peaked around α = 0.37–0.38. The feature-sensitivity peak occurred earlier, around α = 0.25–0.30, which weakens one proposed feature-geometry explanation for the widening.</p>
+                </article>
+                <aside class="project-sidebar-card glass-card" data-reveal>
+                    <h3>Interpretation</h3>
+                    <ul>
+                        <li>Uncertainty widened where the theoretical label is unresolved.</li>
+                        <li>Interpolation between labelled classes could also explain the pattern.</li>
+                        <li>A classifier decision boundary or truncated-model behaviour may contribute.</li>
+                        <li>No control system without an open problem was tested.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Paper &amp; Limitations</span>
+                <h2>An exploratory first step</h2>
+                <p>The study covers one shell model, one feature family, and one classifier. Since the open zone has no ground-truth labels, the results support the hypothesis only indirectly. They do not establish that posterior uncertainty measures undecidability, and they do not address the open regularity problem itself. A useful next test is a control system with a known transition and no unresolved interval.</p>
+                <a class="project-next-link" href="dyadic-shell-model-paper.pdf" target="_blank" rel="noreferrer">Open the full paper (PDF) →</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="project-nav-card glass-card" data-reveal>
+                <span class="project-kicker">Archive</span>
+                <h2>Back to selected projects</h2>
+                <p>Return to the project archive to browse other engineering, computation, and design work.</p>
+                <a class="project-next-link" href="projects.html">Open project archive</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Grace Dice</p><p>Research project</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
